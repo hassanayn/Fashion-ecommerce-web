@@ -71,9 +71,9 @@
   }
   
   .hero {
-    background: url('hero-image.jpg') no-repeat center center;
+    background: url('images/clothes/sma1.jpg') no-repeat center center;
     background-size: cover;
-    color: white;
+    color: rgb(22, 6, 114);
     padding: 80px 20px;
     text-align: center;
   }
@@ -116,6 +116,7 @@
   .category-card {
     text-align: center;
     width: 30%;
+    /* background-color: #bd2424; */
   }
   
   .category-card img {
@@ -383,9 +384,134 @@ html {
     max-width: 300px; /* Ensures that the card doesn't get too large */
   }
 
-  footer .footer-links a,
-footer .social-media a {
-  margin: 5px;
-}
-
+  
+  
+  /* General Carousel Styles */
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1350px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  .carousel-container {
+    position: relative;
+    width: 100%;
+    height: 700px; /* Adjust the height as needed */
+  }
+  
+  .carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .carousel-item {
+    min-width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  
+  .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .carousel-caption {
+    position: absolute;
+    bottom: 30px;
+    left: 20px;
+    color: rgb(27, 38, 185);
+    font-family: Arial, sans-serif;
+  }
+  
+  .carousel-caption h2 {
+    font-size: 36px;
+    font-weight: bold;
+  }
+  
+  .carousel-caption p {
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  
+  .carousel-caption .shop-now {
+    padding: 12px 25px;
+    background-color: #2a9d8f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+  
+  .carousel-caption .shop-now:hover {
+    background-color: #1f7a66;
+  }
+  
+  /* Navigation Arrows */
+  .carousel-prev, .carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 30px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+  }
+  
+  .carousel-prev {
+    left: 10px;
+  }
+  
+  .carousel-next {
+    right: 10px;
+  }
+  
+  .carousel-prev:hover, .carousel-next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .carousel-caption h2 {
+      font-size: 24px;
+    }
+  
+    .carousel-caption p {
+      font-size: 16px;
+    }
+  
+    .carousel-caption .shop-now {
+      font-size: 14px;
+      padding: 10px 20px;
+    }
+  
+    .carousel-container {
+      height: 300px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .carousel-caption h2 {
+      font-size: 20px;
+    }
+  
+    .carousel-caption p {
+      font-size: 14px;
+    }
+  
+    .carousel-caption .shop-now {
+      font-size: 12px;
+      padding: 8px 15px;
+    }
+  
+    .carousel-container {
+      height: 250px;
+    }
+  }
   

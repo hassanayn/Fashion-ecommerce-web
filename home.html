@@ -6,22 +6,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Buy Me Fashion</title>
   <link rel="stylesheet" href="style.css">
+  
+  <script src="carausel.js"></script>
 </head>
 <body>
 
   <!-- Header Section -->
   <header>
     <div class="logo">
-      <a href="#">Buy Me Fashion</a>
+      <a href="images/logo/logo.png">Buy Me Fashion</a>
     </div>
     <nav>
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Men</a></li>
-        <li><a href="#">Women</a></li>
-        <li><a href="#">Accessories</a></li>
-        <li><a href="#">Sale</a></li>
-        <li><a href="#">New Arrivals</a></li>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="men.html">Men</a></li>
+        <li><a href="women.html">Women</a></li>
+        <li><a href="accessories.html">Accessories</a></li>
+        <li><a href="register.html">Sale</a></li>
+        <li><a href="product.html">New Arrivals</a></li>
       </ul>
     </nav>
     <div class="search-cart">
@@ -33,29 +35,87 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
+  
+<!-- Carousel Section -->
+<section class="carousel">
+    <div class="carousel-container">
+      <!-- Carousel Images -->
+      <div class="carousel-slide">
+        <div class="carousel-item">
+          <img src="images\carousel-1\banner-bg.png" alt="Fashion Sale">
+          <div class="carousel-caption">
+            <h2>Winter Fashion Sale</h2>
+            <p>Up to 50% off on selected items!</p>
+            <button class="shop-now">Shop Now</button>
+          </div>
+        </div>
+        
+        <div class="carousel-item">
+            <img src="images\carousel-1\banner-b1g.jpg" alt="Fashion Sale">
+            <div class="carousel-caption">
+              <h2>Winter Fashion Sale</h2>
+              <p>Up to 50% off on selected items!</p>
+              <button class="shop-now">Shop Now</button>
+            </div>
+          </div>
+          
+        <div class="carousel-item">
+          <img src="images\carousel-1\carousel1.png" alt="New Arrivals">
+          <div class="carousel-caption">
+            <h2>New Arrivals</h2>
+            <p>Check out our latest collection.</p>
+            <button class="shop-now">Shop Now</button>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="images\carousel-1\carousel3.png" alt="Special Offers">
+          <div class="carousel-caption">
+            <h2>Exclusive Offers</h2>
+            <p>Limited-time deals on popular styles.</p>
+            <button class="shop-now">Shop Now</button>
+          </div>
+        </div>
+
+        <div class="carousel-slide">
+            <div class="carousel-item">
+              <img src="images\carousel-1\carousel-2.jpg" alt="Fashion Sale">
+              <div class="carousel-caption">
+                <h2>Winter Fashion Sale</h2>
+                <p>Up to 50% off on selected items!</p>
+                <button class="shop-now">Shop Now</button>
+              </div>
+            </div>
+      </div>
+      <!-- Carousel Controls -->
+      <button class="carousel-prev" onclick="moveSlide(-1)">&#10094;</button>
+      <button class="carousel-next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+  </section>
+  
+
+  <!-- Hero Section
   <section class="hero">
     <div class="hero-content">
       <h1>New Year, New You!</h1>
       <p>Shop our latest collection and get up to 50% off on selected items.</p>
       <button class="shop-now">Shop Now</button>
     </div>
-  </section>
+  </section> -->
 
   <!-- Featured Categories Section -->
   <section class="categories">
     <h2>Shop by Category</h2>
     <div class="category-cards">
       <div class="category-card">
-        <img src="men-category.jpg" alt="Men's Fashion">
+        <img src="images/category/team-member-02.jpg" alt="Men's Fashion">
         <h3>Men's Fashion</h3>
       </div>
       <div class="category-card">
-        <img src="women-category.jpg" alt="Women's Fashion">
+        <img src="images/category/team-member-01.jpg" alt="Women's Fashion">
         <h3>Women's Fashion</h3>
       </div>
       <div class="category-card">
-        <img src="accessories-category.jpg" alt="Accessories">
+        <img src="images/category/explore-image-01.jpg" alt="Accessories">
         <h3>Accessories</h3>
       </div>
     </div>
@@ -66,17 +126,17 @@
     <h2>Best Selling Products</h2>
     <div class="products">
       <div class="product-card">
-        <img src="product1.jpg" alt="Product 1">
+        <img src="images/category/team-member-02.jpg" alt="Product 1">
         <p>Product Name</p>
         <p class="price">$49.99</p>
       </div>
       <div class="product-card">
-        <img src="product2.jpg" alt="Product 2">
+        <img src="images/category/explore-image-01.jpg" alt="Product 2">
         <p>Product Name</p>
         <p class="price">$79.99</p>
       </div>
       <div class="product-card">
-        <img src="product3.jpg" alt="Product 3">
+        <img src="images/category/team-member-01.jpg" alt="Product 3">
         <p>Product Name</p>
         <p class="price">$99.99</p>
       </div>

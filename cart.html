@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .cart-container {
+            max-width: 1200px;
+            margin: 30px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .cart-items table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        .cart-items table th,
+        .cart-items table td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        .cart-items table th {
+            background-color: #f2f2f2;
+        }
+
+        .cart-items table td {
+            border: 1px solid #ddd;
+        }
+
+        .cart-summary {
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-top: 1px solid #ddd;
+            margin-top: 20px;
+        }
+
+        .summary-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .summary-item.total {
+            font-weight: bold;
+        }
+
+        #checkout-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        #checkout-btn:hover {
+            background-color: #0056b3;
+        }
+
+        button.remove {
+            background-color: red;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button.remove:hover {
+            background-color: darkred;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .cart-container {
+                padding: 25px;
+            }
+            .cart-items table th,
+            .cart-items table td {
+                font-size: 14px;
+            }
+            .summary-item {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .cart-container {
+                padding: 20px;
+            }
+            .cart-items table th,
+            .cart-items table td {
+                font-size: 13px;
+            }
+            .summary-item {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .cart-container {
+                padding: 15px;
+            }
+
+            .cart-items table th,
+            .cart-items table td {
+                font-size: 12px;
+                padding: 8px;
+            }
+
+            .cart-items table td {
+                display: block;
+                text-align: left;
+                width: 100%;
+            }
+
+            .cart-items table td:first-child {
+                padding-left: 0;
+            }
+
+            .cart-items table td:last-child {
+                padding-right: 0;
+            }
+
+            .summary-item {
+                flex-direction: column;
+                align-items: flex-start;
+                font-size: 14px;
+            }
+
+            #checkout-btn {
+                padding: 12px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .cart-items table th,
+            .cart-items table td {
+                font-size: 10px;
+            }
+
+            .summary-item {
+                font-size: 12px;
+            }
+
+            #checkout-btn {
+                font-size: 12px;
+                padding: 10px;
+            }
+
+            .summary-item {
+                font-size: 12px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="cart-container">
+        <h1>Shopping Cart</h1>
+        <div class="cart-items">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-items-list">
+                    <!-- Dynamic Cart Items Will Appear Here -->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="cart-summary">
+            <h2>Summary</h2>
+            <div class="summary-item">
+                <span>Subtotal:</span> <span id="subtotal">0.00</span>
+            </div>
+            <div class="summary-item">
+                <span>Tax (10%):</span> <span id="tax">0.00</span>
+            </div>
+            <div class="summary-item total">
+                <span>Total:</span> <span id="total">0.00</span>
+            </div>
+            <button id="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <script>
+        // Sample products in the cart
+        const cartItems = [
+            { id: 1, name: "Product 1", price: 20.00, quantity: 2, image: "https://via.placeholder.com/100" },
+            { id: 2, name: "Product 2", price: 15.00, quantity: 1, image: "https://via.placeholder.com/100" }
+        ];
+
+        // Function to render cart items
+        function renderCartItems() {
+            const cartItemsList = document.getElementById('cart-items-list');
+            cartItemsList.innerHTML = ''; // Clear the current cart items
+
+            cartItems.forEach(item => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td><img src="${item.image}" alt="${item.name}" width="50"></td>
+                    <td>$${item.price.toFixed(2)}</td>
+                    <td>
+                        <input type="number" value="${item.quantity}" min="1" class="quantity-input" data-id="${item.id}">
+                    </td>
+                    <td class="item-total">$${(item.price * item.quantity).toFixed(2)}</td>
+                    <td><button class="remove" data-id="${item.id}">Remove</button></td>
+                `;
+                cartItemsList.appendChild(row);
+            });
+
+            updateCartSummary();
+        }
+
+        // Function to update the cart summary
+        function updateCartSummary() {
+            const subtotal = cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            const tax = subtotal * 0.1; // Assuming 10% tax
+            const total = subtotal + tax; // Total is now without shipping
+
+            document.getElementById('subtotal').textContent = `$${subtotal.toFixed(2)}`;
+            document.getElementById('tax').textContent = `$${tax.toFixed(2)}`;
+            document.getElementById('total').textContent = `$${total.toFixed(2)}`;
+        }
+
+        // Event listener for updating quantity
+        document.getElementById('cart-items-list').addEventListener('input', function (event) {
+            if (event.target.classList.contains('quantity-input')) {
+                const itemId = parseInt(event.target.getAttribute('data-id'));
+                const newQuantity = parseInt(event.target.value);
+                
+                const item = cartItems.find(item => item.id === itemId);
+                if (item) {
+                    item.quantity = newQuantity;
+                    renderCartItems();
+                }
+            }
+        });
+
+        // Event listener for removing items
+        document.getElementById('cart-items-list').addEventListener('click', function (event) {
+            if (event.target.classList.contains('remove')) {
+                const itemId = parseInt(event.target.getAttribute('data-id'));
+                const index = cartItems.findIndex(item => item.id === itemId);
+                
+                if (index !== -1) {
+                    cartItems.splice(index, 1); // Remove the item from the cart
+                    renderCartItems();
+                }
+            }
+        });
+
+        // Render the cart initially
+        renderCartItems();
+    </script>
+</body>
+</html>

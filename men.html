@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+
+        /* Men's Products Section */
+.men-products {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.men-products h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+/* Product Cards Container */
+.product-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+/* Individual Product Card */
+.product-card {
+  width: 22%;
+  max-width: 300px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  padding: 15px;
+  text-align: center;
+}
+
+/* Hover effect for product card */
+.product-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+/* Product Image */
+.product-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* Product Name and Price */
+.product-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 16px;
+  color: #2a9d8f;
+  margin-bottom: 15px;
+}
+
+/* Add to Cart Button */
+.add-to-cart {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #2a9d8f;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+  background-color: #1f7b67;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+  .product-cards {
+    justify-content: center;
+  }
+
+  .product-card {
+    width: 45%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-card {
+    width: 80%;
+  }
+
+  .product-name {
+    font-size: 16px;
+  }
+
+  .price {
+    font-size: 14px;
+  }
+
+  .add-to-cart {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+    </style>
+</head>
+<body>
+
+ <!-- Hero Section -->
+ <section class="hero">
+    <div class="hero-content">
+      <h1>New Year, New You!</h1>
+      <p>Shop our latest collection and get up to 50% off on selected items.</p>
+      <button class="shop-now">Shop Now</button>
+    </div>
+  </section>
+
+    
+    <!-- Men's Products Section -->
+<section class="men-products">
+    <h2>Men's Fashion</h2>
+    <div class="product-cards">
+      <div class="product-card">
+        <img src="images/man/men-01.jpg" alt="Men's T-shirt">
+        <p class="product-name">Men's T-shirt</p>
+        <p class="price">$29.99</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="images/man/men-01.jpg" alt="Men's Jeans">
+        <p class="product-name">Men's Jeans</p>
+        <p class="price">$49.99</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="images/man/men-01.jpg" alt="Men's Jacket">
+        <p class="product-name">Men's Jacket</p>
+        <p class="price">$79.99</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="images/man/men-01.jpg" alt="Men's Sneakers">
+        <p class="product-name">Men's Sneakers</p>
+        <p class="price">$99.99</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="images/man/men-01.jpg" alt="Men's Sneakers">
+        <p class="product-name">Men's Sneakers</p>
+        <p class="price">$99.99</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="images/man/men-01.jpg" alt="Men's Sneakers">
+        <p class="product-name">Men's Sneakers</p>
+        <p class="price">$99.99</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="images/man/men-01.jpg" alt="Men's Sneakers">
+        <p class="product-name">Men's Sneakers</p>
+        <p class="price">$99.99</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="images/man/men-01.jpg" alt="Men's Sneakers">
+        <p class="product-name">Men's Sneakers</p>
+        <p class="price">$99.99</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="images/man/men-01.jpg" alt="Men's Sneakers">
+        <p class="product-name">Men's Sneakers</p>
+        <p class="price">$99.99</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="images/man/men-01.jpg" alt="Men's Sneakers">
+        <p class="product-name">Men's Sneakers</p>
+        <p class="price">$99.99</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="images/man/men-01.jpg" alt="Men's Sneakers">
+        <p class="product-name">Men's Sneakers</p>
+        <p class="price">$99.99</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+      <div class="product-card">
+        <img src="images/man/men-01.jpg" alt="Men's Sneakers">
+        <p class="product-name">Men's Sneakers</p>
+        <p class="price">$99.99</p>
+        <button class="add-to-cart">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+  
+</body>
+</html>
