@@ -37,3 +37,46 @@ setInterval(() => {
 showSlide(slideIndex);
 
 
+
+// for header dropdown
+// Toggle mobile menu
+const mobileMenuIcon = document.getElementById("mobile-menu-icon");
+const nav = document.querySelector("nav");
+
+mobileMenuIcon.addEventListener("click", () => {
+  nav.classList.toggle("active"); // Toggle the 'active' class on <nav>
+});
+
+// Sticky header on scroll
+window.onscroll = function () {
+  const header = document.querySelector("header");
+  if (window.scrollY > 0) {
+    header.classList.add("scrolled");
+  } else {
+    header.classList.remove("scrolled");
+  }
+};
+
+
+
+// search
+
+function searchProducts() {
+  // Get the search input value and convert it to lowercase
+  const searchTerm = document.getElementById('search-input').value.toLowerCase();
+
+  // Get all product elements
+  const products = document.querySelectorAll('.product');
+
+  // Loop through all products and hide those that don't match the search term
+  products.forEach(product => {
+      const productName = product.getAttribute('data-name').toLowerCase();
+
+      // If the product name includes the search term, show the product, otherwise hide it
+      if (productName.includes(searchTerm)) {
+          product.style.display = 'block';
+      } else {
+          product.style.display = 'none';
+      }
+  });
+}

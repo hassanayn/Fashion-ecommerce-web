@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reset Password</title>
     <script src="register.js"></script>
+    <link rel="stylesheet" href="style.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -94,6 +95,37 @@
 </head>
 <body>
 
+     <!-- Header Section -->
+<header>
+    <div class="logo">
+      <a href="home.html"><img src="images/logo/logo.png" alt="Buy Me Fashion"></a>
+    </div>
+    
+   
+  
+    <nav class="navbar">
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="men.html">Men</a></li>
+        <li><a href="women.html">Women</a></li>
+        <li><a href="product.html">Accessories</a></li>
+        <li><a href="register.html">Sale</a></li>
+        <li><a href="product.html">New Arrivals</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+    
+    <div class="search-cart">
+      <input type="text" id="search-input" placeholder="Search products..." oninput="searchProducts()">
+      <div class="cart">
+        <a href="cart.html" style="text-decoration: none;">
+          <img src="images/logo/logo.png" alt="Cart">
+        </a>
+        <span class="cart-count">3</span>
+      </div>
+    </div>
+  </header>
+
     <div class="reset-container">
         <h2>Reset Your Password</h2>
         <p>Please enter your email address and a new password below to reset your password.</p>
@@ -163,5 +195,20 @@
         });
     </script>
 
+<!-- Footer Section -->
+<footer>
+    <div class="footer-links">
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="term.html">Terms & Conditions</a>
+    </div>
+    <div class="social-media">
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+      <a href="#">Twitter</a>
+    </div>
+    <p>&copy; 2025 Buy Me Fashion. All rights reserved.</p>
+  </footer>
 </body>
 </html>

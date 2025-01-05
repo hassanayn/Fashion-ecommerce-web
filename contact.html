@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Contact Us | Buy Me Fashion</title>
+    <link rel="stylesheet" href="style.css">
     <style>
         /* General Reset */
         * {
@@ -202,7 +203,36 @@
     </style>
 </head>
 <body>
-
+ <!-- Header Section -->
+ <header>
+    <div class="logo">
+      <a href="home.html"><img src="images/logo/logo.png" alt="Buy Me Fashion"></a>
+    </div>
+    
+   
+  
+    <nav class="navbar">
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="men.html">Men</a></li>
+        <li><a href="women.html">Women</a></li>
+        <li><a href="product.html">Accessories</a></li>
+        <li><a href="register.html">Sale</a></li>
+        <li><a href="product.html">New Arrivals</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+    
+    <div class="search-cart">
+      <input type="text" id="search-input" placeholder="Search products..." oninput="searchProducts()">
+      <div class="cart">
+        <a href="cart.html" style="text-decoration: none;">
+          <img src="images/logo/logo.png" alt="Cart">
+        </a>
+        <span class="cart-count">3</span>
+      </div>
+    </div>
+  </header>
     
 
     <!-- Contact Hero Section with Image -->
@@ -216,20 +246,21 @@
         <!-- Address Card -->
         <div class="card">
             <h3>Our Address</h3>
-            <p>123 Fashion Street, Fashion City, FC 10001</p>
+            <p>Posta, Dar es Salaam</p>
             <a href="https://www.google.com/maps" target="_blank">View on Map</a>
         </div>
 
         <!-- Email Card -->
         <div class="card">
             <h3>Email Us</h3>
-            <p><a href="mailto:info@buymefashion.com">info@buymefashion.com</a></p>
+            <p><a href="mailto:hassa9kashmal@gmail.com">info@buymefashion.com</a></p>
         </div>
 
         <!-- Phone Card -->
         <div class="card">
             <h3>Call Us</h3>
-            <p>+1 (555) 123-4567</p>
+            <p>0689118095</p>
+            <!-- <p>0749391961</p> -->
         </div>
 
         <!-- Social Media Card -->
@@ -260,7 +291,21 @@
         
     </div>
 
-    
+    <!-- Footer Section -->
+  <footer>
+    <div class="footer-links">
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="term.html">Terms & Conditions</a>
+    </div>
+    <div class="social-media">
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+      <a href="#">Twitter</a>
+    </div>
+    <p>&copy; 2025 Buy Me Fashion. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>

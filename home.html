@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Buy Me Fashion</title>
   <link rel="stylesheet" href="style.css">
-  
+  <!-- <script src="https://kit.fontawesome.com/a076d05399.js"></script> -->
   <script src="carausel.js"></script>
 </head>
 <body>
@@ -14,32 +14,36 @@
   <h1 style="text-align: center;">Developed By Kashmal</h1>
 
   <!-- Header Section -->
-  <header>
-    <div class="logo">
-      <a href="images/logo/logo.png">Buy Me Fashion</a>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="home.html">Home</a></li>
-        <li><a href="men.html">Men</a></li>
-        <li><a href="women.html">Women</a></li>
-        <li><a href="product.html">Accessories</a></li>
-        <li><a href="register.html">Sale</a></li>
-        <li><a href="product.html">New Arrivals</a></li>
-        <li><a href="login.html">Login</a></li>
-      </ul>
-    </nav>
-    <div class="search-cart">
-      <input type="text" placeholder="Search products...">
-      <div class="cart">
-        <a href="cart.html" style="text-decoration: none;">
+<header>
+  <div class="logo">
+    <a href="home.html"><img src="images/logo/logo.png" alt="Buy Me Fashion"></a>
+  </div>
+  
+ 
 
-          <img src="images\logo\logo.png" alt="Cart">
-        </a>
-        <span class="cart-count">3</span>
-      </div>
+  <nav class="navbar">
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="men.html">Men</a></li>
+      <li><a href="women.html">Women</a></li>
+      <li><a href="product.html">Accessories</a></li>
+      <li><a href="register.html">Sale</a></li>
+      <li><a href="product.html">New Arrivals</a></li>
+      <li><a href="login.html">Login</a></li>
+    </ul>
+  </nav>
+  
+  <div class="search-cart">
+    <input type="text" id="search-input" placeholder="Search products..." oninput="searchProducts()">
+    <div class="cart">
+      <a href="cart.html" style="text-decoration: none;">
+        <img src="images\logo\d-4.png" alt="Cart">
+      </a>
+      <span class="cart-count">3</span>
     </div>
-  </header>
+  </div>
+</header>
+
 
   
 <!-- Carousel Section -->
@@ -211,6 +215,12 @@
     </div>
     <p>&copy; 2025 Buy Me Fashion. All rights reserved.</p>
   </footer>
+
+    <!-- <div class="social-media">
+      <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+    </div> -->
 
 </body>
 </html>

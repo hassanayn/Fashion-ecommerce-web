@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>About Us | Buy Me Fashion</title>
+    <link rel="stylesheet" href="style.css">
     <style>
         /* General Reset */
         * {
@@ -26,48 +27,8 @@
             line-height: 1.6;
         }
 
-        /* Header Styles */
-        header {
-            background-color: #333;
-            padding: 20px;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        header .logo img {
-            height: 50px;
-            transition: transform 0.3s ease-in-out;
-        }
-
-        header .logo img:hover {
-            transform: scale(1.1);
-        }
-
-        nav .nav-links {
-            list-style: none;
-            text-align: right;
-        }
-
-        nav .nav-links li {
-            display: inline-block;
-            margin: 0 20px;
-        }
-
-        nav .nav-links a {
-            color: white;
-            text-decoration: none;
-            font-size: 16px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: color 0.3s ease, transform 0.3s ease;
-        }
-
-        nav .nav-links a:hover {
-            color: #ff9800;
-            transform: scale(1.1);
-        }
-
+        
+        
         /* Hero Section with Image */
         .hero {
             background: url('images/clothes/Man/18.jpg') no-repeat center center/cover;
@@ -171,22 +132,7 @@
             line-height: 1.8;
         }
 
-        /* Footer Section with Dark Background */
-        .footer {
-            background-color: #333;
-            color: white;
-            padding: 50px 20px;
-            text-align: center;
-        }
-
-        .footer .footer-logo img {
-            height: 40px;
-            margin-bottom: 15px;
-        }
-
-        .footer p {
-            font-size: 14px;
-        }
+        
 
         /* Animations */
         @keyframes fadeInUp {
@@ -235,21 +181,35 @@
 <body>
 
     <!-- Header Section -->
-    <header>
-        <nav>
-            <div class="logo">
-                <a href="/">
-                    <img src="logo.png" alt="Buy Me Fashion Logo">
-                </a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="/shop">Shop</a></li>
-                <li><a href="/about">About Us</a></li>
-                <li><a href="/contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+    <div class="logo">
+      <a href="home.html"><img src="images/logo/logo.png" alt="Buy Me Fashion"></a>
+    </div>
+    
+   
+  
+    <nav class="navbar">
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="men.html">Men</a></li>
+        <li><a href="women.html">Women</a></li>
+        <li><a href="product.html">Accessories</a></li>
+        <li><a href="register.html">Sale</a></li>
+        <li><a href="product.html">New Arrivals</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+    
+    <div class="search-cart">
+      <input type="text" id="search-input" placeholder="Search products..." oninput="searchProducts()">
+      <div class="cart">
+        <a href="cart.html" style="text-decoration: none;">
+          <img src="images/logo/logo.png" alt="Cart">
+        </a>
+        <span class="cart-count">3</span>
+      </div>
+    </div>
+  </header>
 
     <!-- Hero Section with Image -->
     <div class="hero">
@@ -291,17 +251,21 @@
         </ul>
     </div>
 
-    <!-- Footer Section with Dark Background -->
-    <div class="footer">
-        <div class="footer-content">
-            <div class="footer-logo">
-                <a href="/">
-                    <img src="logo-footer.png" alt="Buy Me Fashion Logo">
-                </a>
-            </div>
-            <p>&copy; 2025 Buy Me Fashion. All Rights Reserved.</p>
-        </div>
+    <!-- Footer Section -->
+  <footer>
+    <div class="footer-links">
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact Us</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="term.html">Terms & Conditions</a>
     </div>
+    <div class="social-media">
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+      <a href="#">Twitter</a>
+    </div>
+    <p>&copy; 2025 Buy Me Fashion. All rights reserved.</p>
+  </footer>
 
 </body>
 </html>
