@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="style.css">
     <script src="login.js"></script> <!-- Added script -->
     <style>
-        body {
+        /* body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
             margin: 0;
             padding: 0;
-        }
+        } */
 
         .login-container {
             max-width: 400px;
@@ -97,31 +97,37 @@
 <body>
 
 
-     <!-- Header Section -->
-  <header>
+       <!-- Header Section -->
+<header>
     <div class="logo">
-      <a href="images/logo/logo.png">Buy Me Fashion</a>
+      <a href="home.html"><img src="images/logo/logo.png" alt="Buy Me Fashion"></a>
     </div>
-    <nav>
+    
+   
+  
+    <nav class="navbar">
       <ul>
         <li><a href="home.html">Home</a></li>
         <li><a href="men.html">Men</a></li>
         <li><a href="women.html">Women</a></li>
         <li><a href="product.html">Accessories</a></li>
-        <li><a href="register.html">Sale</a></li>
-        <li><a href="product.html">New Arrivals</a></li>
+        <li><a href="product.html">Sale</a></li>
+        <li><a href="arrival.html">New Arrivals</a></li>
         <li><a href="login.html">Login</a></li>
       </ul>
     </nav>
+    
     <div class="search-cart">
-      <input type="text" placeholder="Search products...">
+      <input type="text" id="search-input" placeholder="Search products..." oninput="searchProducts()">
       <div class="cart">
-        <img src="cart-icon.png" alt="Cart">
+        <a href="cart.html" style="text-decoration: none;">
+          <img src="images\logo\d-4.png" alt="Cart">
+        </a>
         <span class="cart-count">3</span>
       </div>
     </div>
   </header>
-
+  
 
     <div class="login-container">
         <h2>Login</h2>
