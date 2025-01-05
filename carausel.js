@@ -1,3 +1,7 @@
+
+//carousel js
+
+
 let slideIndex = 0;
 
 function showSlide(index) {
@@ -31,3 +35,5 @@ setInterval(() => {
 
 // Initialize the first slide
 showSlide(slideIndex);
+
+
