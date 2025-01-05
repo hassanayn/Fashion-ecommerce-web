@@ -16,14 +16,17 @@
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
-    background-color: #fff;
+    background-color: black;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* position: sticky; */
+    position: sticky;
+    top: 0;
   }
   
   header .logo a {
     font-size: 30px;
     font-weight: bold;
-    color: #000;
+    color: #ffff;
     text-decoration: none;
   }
   
@@ -38,8 +41,12 @@
   
   header nav ul li a {
     text-decoration: none;
-    color: #333;
+    color: #fff;
     font-weight: 600;
+  }
+  header nav ul li a:hover {
+        padding: 5px;
+        border-radius: 2px;
   }
   
   header .search-cart {
@@ -117,6 +124,7 @@
     text-align: center;
     width: 30%;
     /* background-color: #bd2424; */
+    padding: 10px;
   }
   
   .category-card img {
@@ -145,6 +153,8 @@
   .product-card {
     width: 30%;
     text-align: center;
+    padding: 10px;
+    border-radius: 5px;
   }
   
   .product-card img {
@@ -216,7 +226,7 @@
   }
   
   footer {
-    background-color: #2a9d8f;
+    background-color: black;
     color: white;
     padding: 20px;
     text-align: center;
@@ -516,6 +526,55 @@ html {
   }
 
 
+/* Payment Methods Section */
+.payment-methods {
+  background-color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin: 30px 0;
+}
+
+.payment-methods h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.payment-methods p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #666;
+}
+
+.payment-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.payment-icons img {
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.payment-icons img:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .payment-icons {
+      gap: 15px;
+  }
+
+  .payment-icons img {
+      height: 35px;
+  }
+}
 
 
 

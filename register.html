@@ -28,7 +28,8 @@
         }
 
         .form-group {
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+            padding-right: 15px;
         }
 
         label {
@@ -46,6 +47,7 @@
             border: 1px solid #ddd;
             border-radius: 4px;
             font-size: 16px;
+            color: #05221c;
         }
 
         input[type="text"]:focus,
@@ -68,7 +70,7 @@
         }
 
         .submit-btn:hover {
-            background-color: #1f7a66;
+            background-color: #05221c;
         }
 
         .form-footer {
@@ -83,6 +85,9 @@
 
         .form-footer a:hover {
             text-decoration: underline;
+            padding: 5px;
+            /* background-color: #2a9d8f;
+            color: white; */
         }
 
         @media (max-width: 480px) {
@@ -97,7 +102,8 @@
 <body>
 
     <div class="register-container">
-        <h2>Register</h2>
+        <h2>Register Here</h2>
+        <h4>Provide your Personal Details To Get Started</h4>
         <form action="#" method="POST">
             <div class="form-group">
                 <label for="username">Full Name</label>
@@ -122,8 +128,8 @@
             <button type="submit" class="submit-btn">Register</button>
         </form>
 
-        <div class="form-footer">
-            <p>Already have an account? <a href="#">Login here</a></p>
+        <div class="form-footer">-
+            <p>Already have an account? <a href="login.html">Login here</a></p>
         </div>
     </div>
 

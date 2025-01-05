@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>About Us | Buy Me Fashion</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Body */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #333;
+            padding: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        header .logo img {
+            height: 50px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        header .logo img:hover {
+            transform: scale(1.1);
+        }
+
+        nav .nav-links {
+            list-style: none;
+            text-align: right;
+        }
+
+        nav .nav-links li {
+            display: inline-block;
+            margin: 0 20px;
+        }
+
+        nav .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav .nav-links a:hover {
+            color: #ff9800;
+            transform: scale(1.1);
+        }
+
+        /* Hero Section with Image */
+        .hero {
+            background: url('images/clothes/Man/18.jpg') no-repeat center center/cover;
+            height: 500px;
+            padding: 80px 20px;
+            text-align: center;
+            color: white;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            animation: fadeInUp 2s ease-in-out;
+        }
+
+        /* About Us Section with Solid Color */
+        .about-us {
+            background-color: #f9f9f9;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .about-us h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .about-us p {
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.8;
+            max-width: 900px;
+            margin: 20px auto;
+        }
+
+        .about-us ul {
+            list-style: none;
+            max-width: 800px;
+            margin: 40px auto;
+        }
+
+        .about-us ul li {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        /* Gallery Section with Image Background */
+        .gallery {
+            background: url('images/clothes/Man/1.jpg') no-repeat center center/cover;
+            padding: 100px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .gallery h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: white;
+        }
+
+        .gallery p {
+            font-size: 1.1rem;
+            color: white;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Why Choose Us Section with Solid Color */
+        .choose-us {
+            background-color: #ffe4b5;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .choose-us h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .choose-us ul {
+            list-style: none;
+            max-width: 800px;
+            margin: 40px auto;
+        }
+
+        .choose-us ul li {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        /* Footer Section with Dark Background */
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .footer .footer-logo img {
+            height: 40px;
+            margin-bottom: 15px;
+        }
+
+        .footer p {
+            font-size: 14px;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Hover Effects on Links */
+        .about-us a {
+            color: #ff9800;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .about-us a:hover {
+            color: #ff5722;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-us h2 {
+                font-size: 2rem;
+            }
+
+            .about-us p {
+                font-size: 1rem;
+            }
+
+            .about-us ul li {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="/">
+                    <img src="logo.png" alt="Buy Me Fashion Logo">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="/shop">Shop</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section with Image -->
+    <div class="hero">
+        <h1>Welcome to Buy Me Fashion</h1>
+        <p>Your ultimate online destination for stylish, trendy, and affordable fashion.</p>
+    </div>
+
+    <!-- About Us Section with Solid Color -->
+    <div class="about-us">
+        <h2>Our Story</h2>
+        <p>Born from a love of fashion and a mission to make it accessible to all, Buy Me Fashion was created with one simple idea in mind: to bring high-quality, on-trend pieces to fashion lovers everywhere. From casual looks to stunning statement pieces, we provide clothing that fits your style and budget.</p>
+
+        <h2>Our Mission</h2>
+        <p>At Buy Me Fashion, our mission is to empower you through fashion. We want everyone to have access to chic, stylish, and affordable fashion. Whether you're looking for everyday wear or something for a special event, we've got you covered with clothing that's both trendy and timeless.</p>
+
+        <h2>What We Offer</h2>
+        <ul>
+            <li><strong>Trendy Clothing:</strong> Dresses, tops, jeans, skirts, outerwear, and more.</li>
+            <li><strong>Chic Accessories:</strong> Bags, jewelry, scarves, and hats to elevate any look.</li>
+            <li><strong>Footwear:</strong> A wide variety of shoes for every occasion.</li>
+            <li><strong>Size Inclusivity:</strong> Fashion for every body type, from petite to plus-size.</li>
+        </ul>
+    </div>
+
+    <!-- Gallery Section with Image Background -->
+    <div class="gallery">
+        <h2>Explore Our Gallery</h2>
+        <p>Discover the latest collections and explore how our fashion pieces can transform your wardrobe.</p>
+    </div>
+
+    <!-- Why Choose Us Section with Solid Color -->
+    <div class="choose-us">
+        <h2>Why Choose Us?</h2>
+        <ul>
+            <li><strong>Affordable Fashion:</strong> Stay stylish without breaking the bank.</li>
+            <li><strong>Quality You Can Trust:</strong> Carefully curated collections from reputable brands.</li>
+            <li><strong>Fast & Free Shipping:</strong> Enjoy quick delivery with free shipping on qualifying orders.</li>
+            <li><strong>Customer-Centered Service:</strong> Our friendly support team is here to help you every step of the way.</li>
+        </ul>
+    </div>
+
+    <!-- Footer Section with Dark Background -->
+    <div class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <a href="/">
+                    <img src="logo-footer.png" alt="Buy Me Fashion Logo">
+                </a>
+            </div>
+            <p>&copy; 2025 Buy Me Fashion. All Rights Reserved.</p>
+        </div>
+    </div>
+
+</body>
+</html>

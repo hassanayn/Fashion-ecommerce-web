@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Product List Section */
+        .product-list {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+          gap: 30px;
+          padding: 20px;
+        }
+
+        .product-card {
+          position: relative;
+          background-color: white;
+          border-radius: 10px;
+          box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+          overflow: hidden;
+          transition: transform 0.3s ease-in-out;
+        }
+
+        .product-card:hover {
+          transform: translateY(-10px); /* Subtle hover effect */
+          box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+        }
+
+        .product-img {
+          width: 100%;
+          height: 250px;
+          object-fit: cover;
+          border-bottom: 1px solid #f1f1f1;
+        }
+
+        .product-info {
+          padding: 20px;
+        }
+
+        .product-title {
+          font-size: 20px;
+          font-weight: bold;
+          color: #333;
+          margin-bottom: 10px;
+        }
+
+        .product-price {
+          font-size: 20px;
+          font-weight: bold;
+          color: #2a9d8f;
+          margin-bottom: 20px;
+        }
+
+        .discount-price {
+          font-size: 18px;
+          font-weight: bold;
+          color: #e74c3c;
+          text-decoration: none;
+          margin-left: 10px;
+        }
+
+        .original-price {
+          font-size: 18px;
+          text-decoration: line-through;
+          color: #aaa;
+        }
+
+        .product-actions {
+          display: flex;
+          justify-content: space-between;
+        }
+
+        .btn {
+          padding: 10px 20px;
+          font-size: 14px;
+          border-radius: 4px;
+          cursor: pointer;
+          border: none;
+          transition: background-color 0.3s ease;
+        }
+
+        .add-to-cart {
+          background-color: #2a9d8f;
+          color: white;
+        }
+
+        .add-to-cart:hover {
+          background-color: #1f7a66;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+          .product-title {
+            font-size: 18px;
+          }
+
+          .product-price {
+            font-size: 18px;
+          }
+
+          .product-card {
+            transform: none;
+          }
+
+          .product-actions {
+            flex-direction: column;
+          }
+
+          .btn {
+            width: 100%;
+            margin-bottom: 10px;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .product-title {
+            font-size: 16px;
+          }
+
+          .product-price {
+            font-size: 16px;
+          }
+        }
+
+    </style>
+</head>
+<body>
+
+
+
+    <!-- products -->
+    <div>
+        <h1 style="text-align: center; margin: 15px;">OUR PRODUCT</h1>
+    </div>
+    
+    <section class="product-list">
+        <div class="product-card">
+          <img src="images\clothes\accessories\1.jpg" alt="Product 1" class="product-img" />
+          <div class="product-info">
+            <h3 class="product-title">Classic Leather Jacket</h3>
+            <div class="product-price">
+                <span class="discount-price">$99.99</span>
+              <span class="original-price">$129.99</span>
+            </div>
+            <div class="product-actions">
+              <button class="btn add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      
+        <div class="product-card">
+          <img src="images\clothes\accessories\2.jpg" alt="Product 2" class="product-img" />
+          <div class="product-info">
+            <h3 class="product-title">Cotton T-Shirt</h3>
+            <div class="product-price">
+                <span class="discount-price">$19.99</span>
+              <span class="original-price">$25.99</span>
+            </div>
+            <div class="product-actions">
+              <button class="btn add-to-cart">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-card">
+            <img src="images\clothes\accessories\3.jpg" alt="Product 1" class="product-img" />
+            <div class="product-info">
+              <h3 class="product-title">Classic Leather Jacket</h3>
+              <div class="product-price">
+                  <span class="discount-price">$99.99</span>
+                <span class="original-price">$129.99</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        
+          <div class="product-card">
+            <img src="images\clothes\accessories\4.jpg" alt="Product 2" class="product-img" />
+            <div class="product-info">
+              <h3 class="product-title">Cotton T-Shirt</h3>
+              <div class="product-price">
+                  <span class="discount-price">$19.99</span>
+                <span class="original-price">$25.99</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <img src="images\clothes\accessories\5.jpg" alt="Product 1" class="product-img" />
+            <div class="product-info">
+              <h3 class="product-title">Classic Leather Jacket</h3>
+              <div class="product-price">
+                  <span class="discount-price">$99.99</span>
+                <span class="original-price">$129.99</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        
+          <div class="product-card">
+            <img src="images\clothes\accessories\6.jpg" alt="Product 2" class="product-img" />
+            <div class="product-info">
+              <h3 class="product-title">Cotton T-Shirt</h3>
+              <div class="product-price">
+                  <span class="discount-price">$19.99</span>
+                <span class="original-price">$25.99</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <img src="images\clothes\accessories\7.jpg" alt="Product 1" class="product-img" />
+            <div class="product-info">
+              <h3 class="product-title">Classic Leather Jacket</h3>
+              <div class="product-price">
+                  <span class="discount-price">$99.99</span>
+                <span class="original-price">$129.99</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        
+          <div class="product-card">
+            <img src="images\clothes\accessories\8.jpg" alt="Product 2" class="product-img" />
+            <div class="product-info">
+              <h3 class="product-title">Cotton T-Shirt</h3>
+              <div class="product-price">
+                  <span class="discount-price">$19.99</span>
+                <span class="original-price">$25.99</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <img src="images\clothes\accessories\9.jpg" alt="Product 1" class="product-img" />
+            <div class="product-info">
+              <h3 class="product-title">Classic Leather Jacket</h3>
+              <div class="product-price">
+                  <span class="discount-price">$99.99</span>
+                <span class="original-price">$129.99</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <img src="images\clothes\accessories\10.jpg" alt="Product 1" class="product-img" />
+            <div class="product-info">
+              <h3 class="product-title">Classic Leather Jacket</h3>
+              <div class="product-price">
+                  <span class="discount-price">$99.99</span>
+                <span class="original-price">$129.99</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <img src="images\clothes\accessories\11.jpg" alt="Product 1" class="product-img" />
+            <div class="product-info">
+              <h3 class="product-title">Classic Leather Jacket</h3>
+              <div class="product-price">
+                  <span class="discount-price">$99.99</span>
+                <span class="original-price">$129.99</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+        
+          <div class="product-card">
+            <img src="images\clothes\accessories\12.jpg" alt="Product 2" class="product-img" />
+            <div class="product-info">
+              <h3 class="product-title">Cotton T-Shirt</h3>
+              <div class="product-price">
+                  <span class="discount-price">$19.99</span>
+                <span class="original-price">$25.99</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- boys -->
+
+          <div class="product-card">
+            <img src="images\clothes\accessories\12.jpg" alt="Product 2" class="product-img" />
+            <div class="product-info">
+              <h3 class="product-title">Cotton T-Shirt</h3>
+              <div class="product-price">
+                  <span class="discount-price">$19.99</span>
+                <span class="original-price">$25.99</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="images\clothes\accessories\12.jpg" alt="Product 2" class="product-img" />
+            <div class="product-info">
+              <h3 class="product-title">Cotton T-Shirt</h3>
+              <div class="product-price">
+                  <span class="discount-price">$19.99</span>
+                <span class="original-price">$25.99</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="images\clothes\accessories\12.jpg" alt="Product 2" class="product-img" />
+            <div class="product-info">
+              <h3 class="product-title">Cotton T-Shirt</h3>
+              <div class="product-price">
+                  <span class="discount-price">$19.99</span>
+                <span class="original-price">$25.99</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- boys -->
+
+          <div class="product-card">
+            <img src="images\clothes\accessories\shoes/1.jpg" alt="Product 2" class="product-img" />
+            <div class="product-info">
+              <h3 class="product-title">Cotton T-Shirt</h3>
+              <div class="product-price">
+                  <span class="discount-price">$19.99</span>
+                <span class="original-price">$25.99</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <img src="images\clothes\accessories\shoes/2.jpg" alt="Product 2" class="product-img" />
+            <div class="product-info">
+              <h3 class="product-title">Cotton T-Shirt</h3>
+              <div class="product-price">
+                  <span class="discount-price">$19.99</span>
+                <span class="original-price">$25.99</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="images\clothes\accessories\shoes/3.jpg" alt="Product 2" class="product-img" />
+            <div class="product-info">
+              <h3 class="product-title">Cotton T-Shirt</h3>
+              <div class="product-price">
+                  <span class="discount-price">$19.99</span>
+                <span class="original-price">$25.99</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="images\clothes\accessories\shoes/4.jpg" alt="Product 2" class="product-img" />
+            <div class="product-info">
+              <h3 class="product-title">Cotton T-Shirt</h3>
+              <div class="product-price">
+                  <span class="discount-price">$19.99</span>
+                <span class="original-price">$25.99</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="images\clothes\accessories\shoes/5.jpg" alt="Product 2" class="product-img" />
+            <div class="product-info">
+              <h3 class="product-title">Cotton T-Shirt</h3>
+              <div class="product-price">
+                  <span class="discount-price">$19.99</span>
+                <span class="original-price">$25.99</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="images\clothes\accessories\shoes/6.jpg" alt="Product 2" class="product-img" />
+            <div class="product-info">
+              <h3 class="product-title">Cotton T-Shirt</h3>
+              <div class="product-price">
+                  <span class="discount-price">$19.99</span>
+                <span class="original-price">$25.99</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="images\clothes\accessories\shoes/7.jpg" alt="Product 2" class="product-img" />
+            <div class="product-info">
+              <h3 class="product-title">Cotton T-Shirt</h3>
+              <div class="product-price">
+                  <span class="discount-price">$19.99</span>
+                <span class="original-price">$25.99</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="images\clothes\accessories\shoes/8.jpg" alt="Product 2" class="product-img" />
+            <div class="product-info">
+              <h3 class="product-title">Cotton T-Shirt</h3>
+              <div class="product-price">
+                  <span class="discount-price">$19.99</span>
+                <span class="original-price">$25.99</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="images\clothes\accessories\shoes/10.jpg" alt="Product 2" class="product-img" />
+            <div class="product-info">
+              <h3 class="product-title">Cotton T-Shirt</h3>
+              <div class="product-price">
+                  <span class="discount-price">$19.99</span>
+                <span class="original-price">$25.99</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="images\clothes\accessories\shoes/11.jpg" alt="Product 2" class="product-img" />
+            <div class="product-info">
+              <h3 class="product-title">Cotton T-Shirt</h3>
+              <div class="product-price">
+                  <span class="discount-price">$19.99</span>
+                <span class="original-price">$25.99</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="images\clothes\accessories\shoes/12.jpg" alt="Product 2" class="product-img" />
+            <div class="product-info">
+              <h3 class="product-title">Cotton T-Shirt</h3>
+              <div class="product-price">
+                  <span class="discount-price">$19.99</span>
+                <span class="original-price">$25.99</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="images\clothes\accessories\shoes/13.jpg" alt="Product 2" class="product-img" />
+            <div class="product-info">
+              <h3 class="product-title">Cotton T-Shirt</h3>
+              <div class="product-price">
+                  <span class="discount-price">$19.99</span>
+                <span class="original-price">$25.99</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="images\clothes\accessories\shoes/14.jpg" alt="Product 2" class="product-img" />
+            <div class="product-info">
+              <h3 class="product-title">Cotton T-Shirt</h3>
+              <div class="product-price">
+                  <span class="discount-price">$19.99</span>
+                <span class="original-price">$25.99</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="images\clothes\accessories\shoes/15.jpg" alt="Product 2" class="product-img" />
+            <div class="product-info">
+              <h3 class="product-title">Cotton T-Shirt</h3>
+              <div class="product-price">
+                  <span class="discount-price">$19.99</span>
+                <span class="original-price">$25.99</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="images\clothes\accessories\shoes/16.jpg" alt="Product 2" class="product-img" />
+            <div class="product-info">
+              <h3 class="product-title">Cotton T-Shirt</h3>
+              <div class="product-price">
+                  <span class="discount-price">$19.99</span>
+                <span class="original-price">$25.99</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="images\clothes\accessories\shoes/17.jpg" alt="Product 2" class="product-img" />
+            <div class="product-info">
+              <h3 class="product-title">Cotton T-Shirt</h3>
+              <div class="product-price">
+                  <span class="discount-price">$19.99</span>
+                <span class="original-price">$25.99</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="images\clothes\accessories\shoes/18.jpg" alt="Product 2" class="product-img" />
+            <div class="product-info">
+              <h3 class="product-title">Cotton T-Shirt</h3>
+              <div class="product-price">
+                  <span class="discount-price">$19.99</span>
+                <span class="original-price">$25.99</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <img src="images\clothes\accessories\shoes/19.jpg" alt="Product 2" class="product-img" />
+            <div class="product-info">
+              <h3 class="product-title">Cotton T-Shirt</h3>
+              <div class="product-price">
+                  <span class="discount-price">$19.99</span>
+                <span class="original-price">$25.99</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <img src="images\clothes\accessories\shoes/20.jpg" alt="Product 2" class="product-img" />
+            <div class="product-info">
+              <h3 class="product-title">Cotton T-Shirt</h3>
+              <div class="product-price">
+                  <span class="discount-price">$19.99</span>
+                <span class="original-price">$25.99</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="images\clothes\accessories\shoes/21.jpg" alt="Product 2" class="product-img" />
+            <div class="product-info">
+              <h3 class="product-title">Cotton T-Shirt</h3>
+              <div class="product-price">
+                  <span class="discount-price">$19.99</span>
+                <span class="original-price">$25.99</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="images\clothes\accessories\shoes/22.jpg" alt="Product 2" class="product-img" />
+            <div class="product-info">
+              <h3 class="product-title">Cotton T-Shirt</h3>
+              <div class="product-price">
+                  <span class="discount-price">$19.99</span>
+                <span class="original-price">$25.99</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="images\clothes\accessories\shoes/23.jpg" alt="Product 2" class="product-img" />
+            <div class="product-info">
+              <h3 class="product-title">Cotton T-Shirt</h3>
+              <div class="product-price">
+                  <span class="discount-price">$19.99</span>
+                <span class="original-price">$25.99</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="images\clothes\accessories\shoes/24.jpg" alt="Product 2" class="product-img" />
+            <div class="product-info">
+              <h3 class="product-title">Cotton T-Shirt</h3>
+              <div class="product-price">
+                  <span class="discount-price">$19.99</span>
+                <span class="original-price">$25.99</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="images\clothes\accessories\shoes/25.jpg" alt="Product 2" class="product-img" />
+            <div class="product-info">
+              <h3 class="product-title">Cotton T-Shirt</h3>
+              <div class="product-price">
+                  <span class="discount-price">$19.99</span>
+                <span class="original-price">$25.99</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="images\clothes\accessories\shoes/26.jpg" alt="Product 2" class="product-img" />
+            <div class="product-info">
+              <h3 class="product-title">Cotton T-Shirt</h3>
+              <div class="product-price">
+                  <span class="discount-price">$19.99</span>
+                <span class="original-price">$25.99</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="images\clothes\accessories\shoes/27.jpg" alt="Product 2" class="product-img" />
+            <div class="product-info">
+              <h3 class="product-title">Cotton T-Shirt</h3>
+              <div class="product-price">
+                  <span class="discount-price">$19.99</span>
+                <span class="original-price">$25.99</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="images\clothes\accessories\shoes/28.jpg" alt="Product 2" class="product-img" />
+            <div class="product-info">
+              <h3 class="product-title">Cotton T-Shirt</h3>
+              <div class="product-price">
+                  <span class="discount-price">$19.99</span>
+                <span class="original-price">$25.99</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="images\clothes\accessories\shoes/29.jpg" alt="Product 2" class="product-img" />
+            <div class="product-info">
+              <h3 class="product-title">Cotton T-Shirt</h3>
+              <div class="product-price">
+                  <span class="discount-price">$19.99</span>
+                <span class="original-price">$25.99</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="images\clothes\accessories\shoes/30.jpg" alt="Product 2" class="product-img" />
+            <div class="product-info">
+              <h3 class="product-title">Cotton T-Shirt</h3>
+              <div class="product-price">
+                  <span class="discount-price">$19.99</span>
+                <span class="original-price">$25.99</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <img src="images\clothes\accessories\shoes/31.jpg" alt="Product 2" class="product-img" />
+            <div class="product-info">
+              <h3 class="product-title">Cotton T-Shirt</h3>
+              <div class="product-price">
+                  <span class="discount-price">$19.99</span>
+                <span class="original-price">$25.99</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="images\clothes\accessories\shoes/32.jpg" alt="Product 2" class="product-img" />
+            <div class="product-info">
+              <h3 class="product-title">Cotton T-Shirt</h3>
+              <div class="product-price">
+                  <span class="discount-price">$19.99</span>
+                <span class="original-price">$25.99</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="images\clothes\accessories\shoes/33.jpg" alt="Product 2" class="product-img" />
+            <div class="product-info">
+              <h3 class="product-title">Cotton T-Shirt</h3>
+              <div class="product-price">
+                  <span class="discount-price">$19.99</span>
+                <span class="original-price">$25.99</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="product-card">
+            <img src="images\clothes\accessories\shoes/34.jpg" alt="Product 2" class="product-img" />
+            <div class="product-info">
+              <h3 class="product-title">Cotton T-Shirt</h3>
+              <div class="product-price">
+                  <span class="discount-price">$19.99</span>
+                <span class="original-price">$25.99</span>
+              </div>
+              <div class="product-actions">
+                <button class="btn add-to-cart">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+      
+        <!-- Add more product cards as needed -->
+      </section>
+
+      <!-- Footer Section -->
+  <footer>
+    <div class="footer-links">
+      <a href="#">About Us</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms & Conditions</a>
+    </div>
+    <div class="social-media">
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+      <a href="#">Twitter</a>
+    </div>
+    <p>&copy; 2025 Buy Me Fashion. All rights reserved.</p>
+  </footer>
+</body>
+</html>
