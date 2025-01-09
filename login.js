@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
             if (response.ok) {
                 // If login is successful, you might want to redirect the user to another page
                 alert('Login successful!');
-                window.location.href = '/home.html'; // Example: redirect to a dashboard or home page
+                window.location.href = '/cart.html'; // Example: redirect to a dashboard or home page
             } else {
                 // Show error message from the backend
                 alert(data.message || 'Invalid email or password.');
