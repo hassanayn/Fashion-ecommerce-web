@@ -1,0 +1,55 @@
+<!-- Men's Products Section -->
+<section class="men-products">
+    <h2>Men's Fashion</h2>
+    <div class="product-cards">
+        <div class="product-card">
+            <img src="images/man/men-01.jpg" alt="Men's T-shirt">
+            <p class="product-name">Arm Jeans</p>
+            <p class="price">$29.99</p>
+            <button class="add-to-cart" data-name="Arm Jeans" data-price="29.99">Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="images/man/men-02.jpg" alt="Men's Jeans">
+            <p class="product-name">Soft Jeans</p>
+            <p class="price">$49.99</p>
+            <button class="add-to-cart" data-name="Soft Jeans" data-price="49.99">Add to Cart</button>
+        </div>
+        <div class="product-card">
+            <img src="images/man/men-03.jpg" alt="Men's Jacket">
+            <p class="product-name">Black Jacket</p>
+            <p class="price">$79.99</p>
+            <button class="add-to-cart" data-name="Black Jacket" data-price="79.99">Add to Cart</button>
+        </div>
+        <!-- More products as before -->
+    </div>
+</section>
+
+<!-- Cart Link -->
+<a href="hey.html" id="cart-link">Go to Cart</a>
+
+<script>
+// JavaScript for adding products to the cart
+document.addEventListener("DOMContentLoaded", function() {
+    const addToCartButtons = document.querySelectorAll(".add-to-cart");
+
+    // Event listener for 'Add to Cart' button
+    addToCartButtons.forEach(button => {
+        button.addEventListener("click", function() {
+            const productName = button.getAttribute("data-name");
+            const productPrice = button.getAttribute("data-price");
+
+            // Retrieve current cart from localStorage
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            // Add selected product to cart
+            cart.push({ name: productName, price: productPrice });
+
+            // Save the updated cart back to localStorage
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            // Optionally, show an alert or update the cart link with the item count
+            alert(productName + " has been added to the cart!");
+        });
+    });
+});
+</script>

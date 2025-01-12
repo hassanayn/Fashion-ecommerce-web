@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 30px;
+            color: #333;
+        }
+
+        #cart-items {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .cart-item:last-child {
+            border-bottom: none;
+        }
+
+        .cart-item p {
+            margin: 0;
+            font-size: 16px;
+            color: #555;
+        }
+
+        .remove-from-cart {
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .remove-from-cart:hover {
+            background-color: #ff1a1a;
+        }
+
+        .cart-total {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            background-color: #fff;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        .cart-empty {
+            text-align: center;
+            font-size: 18px;
+            color: #888;
+            padding: 40px;
+        }
+
+        #cart-link, #checkout-link {
+            display: inline-block;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #007bff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        #cart-link:hover, #checkout-link:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h2>Your Cart</h2>
+    <div id="cart-items"></div>
+
+    <div class="cart-total">
+        <span>Total Price: $<span id="total-price">0.00</span></span>
+    </div>
+
+    <div class="cart-empty" id="empty-cart-message"></div>
+
+    <a href="index.html" id="cart-link">Continue Shopping</a>
+    <a href="checkout.html" id="checkout-link">Proceed to Checkout</a>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Retrieve cart data from localStorage
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        // Get the cart container and total price elements
+        const cartContainer = document.getElementById("cart-items");
+        const totalPriceElement = document.getElementById("total-price");
+        const emptyCartMessage = document.getElementById("empty-cart-message");
+
+        let totalPrice = 0;
+
+        // If the cart is empty
+        if (cart.length === 0) {
+            cartContainer.style.display = 'none';
+            emptyCartMessage.textContent = "Your cart is empty. Start shopping!";
+        } else {
+            // Display each product in the cart
+            cart.forEach((item, index) => {
+                const productElement = document.createElement("div");
+                productElement.classList.add("cart-item");
+                productElement.innerHTML = `
+                    <p>Product: ${item.name}</p>
+                    <p>Price: $${item.price}</p>
+                    <button class="remove-from-cart" data-index="${index}">Remove</button>
+                `;
+                cartContainer.appendChild(productElement);
+
+                // Update total price
+                totalPrice += parseFloat(item.price);
+            });
+
+            // Display total price
+            totalPriceElement.textContent = totalPrice.toFixed(2);
+        }
+
+        // Event listener for remove buttons
+        const removeButtons = document.querySelectorAll(".remove-from-cart");
+        removeButtons.forEach(button => {
+            button.addEventListener("click", function() {
+                const index = button.getAttribute("data-index");
+
+                // Remove the item from the cart array
+                cart.splice(index, 1);
+
+                // Save the updated cart back to localStorage
+                localStorage.setItem("cart", JSON.stringify(cart));
+
+                // Reload the page to reflect the changes
+                location.reload();
+            });
+        });
+    });
+    </script>
+</body>
+</html>
