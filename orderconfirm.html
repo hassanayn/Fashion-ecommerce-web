@@ -1,0 +1,242 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 30px;
+            color: #333;
+        }
+
+        .confirmation-container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .confirmation-details {
+            margin-top: 20px;
+        }
+
+        .confirmation-details p {
+            margin: 10px 0;
+        }
+
+        .confirmation-button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        .confirmation-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h2>Order Confirmation</h2>
+    <div class="confirmation-container">
+        <div class="confirmation-details">
+            <p>Thank you for your order!</p>
+            <p>Your order ID: <span id="order-id"></span></p>
+            <p>Your payment status: <span id="payment-status"></span></p>
+            <p>We will send you tracking information once your order is shipped.</p>
+        </div>
+
+        <button class="confirmation-button" onclick="window.location.href='home.html'">Go to Home</button>
+    </div>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const orderId = urlParams.get('orderId');
+
+        // Fetch order details
+        fetch(`http://localhost:3000/order-status/${orderId}`)
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("order-id").textContent = orderId;
+                document.getElementById("payment-status").textContent = data[0].status;
+            });
+    });
+    </script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 30px;
+            color: #333;
+        }
+
+        .order-container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .order-details {
+            margin-bottom: 20px;
+        }
+
+        .order-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .order-item:last-child {
+            border-bottom: none;
+        }
+
+        .order-item p {
+            margin: 0;
+            font-size: 16px;
+            color: #555;
+        }
+
+        .order-total {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .order-summary {
+            margin-top: 20px;
+        }
+
+        .order-summary p {
+            font-size: 16px;
+            margin: 5px 0;
+        }
+
+        .order-summary h3 {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        .back-to-home {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .back-to-home a {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .back-to-home a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h2>Order Confirmation</h2>
+    <div class="order-container">
+        <div class="order-details">
+            <h3>Order Summary</h3>
+            <div id="order-items"></div>
+
+            <div class="order-total">
+                Total Price: $<span id="total-price">0.00</span>
+            </div>
+        </div>
+
+        <div class="order-summary">
+            <h3>Shipping Information</h3>
+            <p><strong>Full Name:</strong> <span id="full-name"></span></p>
+            <p><strong>Email:</strong> <span id="email"></span></p>
+            <p><strong>Address:</strong> <span id="address"></span></p>
+            <p><strong>City:</strong> <span id="city"></span></p>
+            <p><strong>Country:</strong> <span id="country"></span></p>
+        </div>
+
+        <div class="back-to-home">
+            <a href="home.html">Back to Home</a>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const orderId = new URLSearchParams(window.location.search).get("orderId");
+            const orderData = JSON.parse(localStorage.getItem("order_" + orderId)) || {};
+
+            if (!orderData.orderId) {
+                window.location.href = "home.html"; // Redirect if no valid order data is found
+                return;
+            }
+
+            // Populate order items
+            const orderItemsContainer = document.getElementById("order-items");
+            const totalPriceElement = document.getElementById("total-price");
+
+            let totalPrice = 0;
+
+            orderData.cart.forEach(item => {
+                const productElement = document.createElement("div");
+                productElement.classList.add("order-item");
+                productElement.innerHTML = `
+                    <p>Product: ${item.name}</p>
+                    <p>Price: $${item.price}</p>
+                `;
+                orderItemsContainer.appendChild(productElement);
+                totalPrice += parseFloat(item.price);
+            });
+
+            totalPriceElement.textContent = totalPrice.toFixed(2);
+
+            // Populate shipping information
+            document.getElementById("full-name").textContent = orderData.fullName;
+            document.getElementById("email").textContent = orderData.email;
+            document.getElementById("address").textContent = orderData.address;
+            document.getElementById("city").textContent = orderData.city;
+            document.getElementById("country").textContent = orderData.country;
+
+            // Store the order data in localStorage for later use or reference (if required)
+            localStorage.setItem("order_" + orderData.orderId, JSON.stringify(orderData));
+        });
+    </script>
+</body>
+</html>

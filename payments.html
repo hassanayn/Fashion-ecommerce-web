@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 30px;
+            color: #333;
+        }
+
+        .checkout-container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .checkout-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .checkout-item:last-child {
+            border-bottom: none;
+        }
+
+        .checkout-item p {
+            margin: 0;
+            font-size: 16px;
+            color: #555;
+        }
+
+        .checkout-form {
+            margin-top: 30px;
+        }
+
+        .checkout-form input, .checkout-form select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 16px;
+        }
+
+        .checkout-form button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .checkout-form button:hover {
+            background-color: #0056b3;
+        }
+
+        .checkout-total {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .checkout-empty {
+            text-align: center;
+            font-size: 18px;
+            color: #888;
+            padding: 40px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Checkout</h2>
+    <div class="checkout-container">
+        <div id="checkout-items"></div>
+
+        <div class="checkout-total">
+            Total Price: $<span id="checkout-total-price">0.00</span>
+        </div>
+
+        <div class="checkout-form">
+            <h3>Shipping Information</h3>
+            <input type="text" id="full-name" placeholder="Full Name" required>
+            <input type="email" id="email" placeholder="Email Address" required>
+            <input type="text" id="address" placeholder="Shipping Address" required>
+            <input type="text" id="city" placeholder="City" required>
+            <select id="country" required>
+                <option value="">Select Country</option>
+                <option value="TZ">Tanzania</option>
+                <option value="KE">Kenya</option>
+                <option value="UG">Uganda</option>
+            </select>
+            <button id="confirm-order">Confirm Order</button>
+        </div>
+    </div>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        const checkoutItemsContainer = document.getElementById("checkout-items");
+        const totalPriceElement = document.getElementById("checkout-total-price");
+
+        let totalPrice = 0;
+
+        if (cart.length === 0) {
+            checkoutItemsContainer.innerHTML = "<p>Your cart is empty. Please go back to the cart page.</p>";
+        } else {
+            cart.forEach(item => {
+                const productElement = document.createElement("div");
+                productElement.classList.add("checkout-item");
+                productElement.innerHTML = `
+                    <p>Product: ${item.name}</p>
+                    <p>Price: $${item.price}</p>
+                `;
+                checkoutItemsContainer.appendChild(productElement);
+                totalPrice += parseFloat(item.price);
+            });
+
+            totalPriceElement.textContent = totalPrice.toFixed(2);
+        }
+
+        document.getElementById("confirm-order").addEventListener("click", function() {
+            const fullName = document.getElementById("full-name").value;
+            const email = document.getElementById("email").value;
+            const address = document.getElementById("address").value;
+            const city = document.getElementById("city").value;
+            const country = document.getElementById("country").value;
+
+            if (fullName && email && address && city && country) {
+                // Place the order in the backend
+                const orderData = {
+                    userId: 1, // Use actual logged-in user's ID
+                    totalPrice,
+                    shippingAddress: address,
+                    city,
+                    country,
+                    cart
+                };
+
+                fetch("http://localhost:3000/checkout", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(orderData)
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.message === "Order placed successfully") {
+                        localStorage.removeItem("cart");
+                        window.location.href = "payment.html?orderId=" + data.orderId;
+                    }
+                })
+                .catch(err => {
+                    alert("Error placing order");
+                    console.error(err);
+                });
+            } else {
+                alert("Please fill in all the shipping details.");
+            }
+        });
+    });
+    </script>
+</body>
+</html>
