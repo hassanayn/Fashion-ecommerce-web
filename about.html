@@ -27,9 +27,7 @@
             line-height: 1.6;
         }
 
-        
-        
-        /* Hero Section with Image */
+        /* Hero Section */
         .hero {
             background: url('images/clothes/Man/18.jpg') no-repeat center center/cover;
             height: 500px;
@@ -52,10 +50,15 @@
             animation: fadeInUp 2s ease-in-out;
         }
 
-        /* About Us Section with Solid Color */
+        /* About Us Section */
         .about-us {
             background-color: #f9f9f9;
             padding: 80px 20px;
+        }
+
+        .about-us .container {
+            max-width: 1200px;
+            margin: 0 auto;
             text-align: center;
         }
 
@@ -85,7 +88,7 @@
             line-height: 1.8;
         }
 
-        /* Gallery Section with Image Background */
+        /* Gallery Section */
         .gallery {
             background: url('images/clothes/Man/1.jpg') no-repeat center center/cover;
             padding: 100px 20px;
@@ -93,24 +96,32 @@
             color: white;
         }
 
+        .gallery .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
         .gallery h2 {
             font-size: 2.5rem;
             margin-bottom: 30px;
-            color: white;
         }
 
         .gallery p {
             font-size: 1.1rem;
-            color: white;
             line-height: 1.8;
             max-width: 800px;
             margin: 0 auto;
         }
 
-        /* Why Choose Us Section with Solid Color */
+        /* Why Choose Us Section */
         .choose-us {
             background-color: #ffe4b5;
             padding: 80px 20px;
+        }
+
+        .choose-us .container {
+            max-width: 1200px;
+            margin: 0 auto;
             text-align: center;
         }
 
@@ -131,8 +142,6 @@
             margin-bottom: 15px;
             line-height: 1.8;
         }
-
-        
 
         /* Animations */
         @keyframes fadeInUp {
@@ -185,8 +194,6 @@
     <div class="logo">
       <a href="home.html"><img src="images/logo/logo.png" alt="Buy Me Fashion"></a>
     </div>
-    
-   
   
     <nav class="navbar">
       <ul>
@@ -211,48 +218,54 @@
     </div>
   </header>
 
-    <!-- Hero Section with Image -->
+    <!-- Hero Section -->
     <div class="hero">
-        <h1>Welcome to Buy Me Fashion</h1>
+        <h1>Welcome to Shopper</h1>
         <p>Your ultimate online destination for stylish, trendy, and affordable fashion.</p>
     </div>
 
-    <!-- About Us Section with Solid Color -->
+    <!-- About Us Section -->
     <div class="about-us">
-        <h2>Our Story</h2>
-        <p>Born from a love of fashion and a mission to make it accessible to all, Buy Me Fashion was created with one simple idea in mind: to bring high-quality, on-trend pieces to fashion lovers everywhere. From casual looks to stunning statement pieces, we provide clothing that fits your style and budget.</p>
+        <div class="container">
+            <h2>Our Story</h2>
+            <p>Born from a love of fashion and a mission to make it accessible to all, Buy Me Fashion was created with one simple idea in mind: to bring high-quality, on-trend pieces to fashion lovers everywhere. From casual looks to stunning statement pieces, we provide clothing that fits your style and budget.</p>
 
-        <h2>Our Mission</h2>
-        <p>At Buy Me Fashion, our mission is to empower you through fashion. We want everyone to have access to chic, stylish, and affordable fashion. Whether you're looking for everyday wear or something for a special event, we've got you covered with clothing that's both trendy and timeless.</p>
+            <h2>Our Mission</h2>
+            <p>At Shopper, our mission is to empower you through fashion. We want everyone to have access to chic, stylish, and affordable fashion. Whether you're looking for everyday wear or something for a special event, we've got you covered with clothing that's both trendy and timeless.</p>
 
-        <h2>What We Offer</h2>
-        <ul>
-            <li><strong>Trendy Clothing:</strong> Dresses, tops, jeans, skirts, outerwear, and more.</li>
-            <li><strong>Chic Accessories:</strong> Bags, jewelry, scarves, and hats to elevate any look.</li>
-            <li><strong>Footwear:</strong> A wide variety of shoes for every occasion.</li>
-            <li><strong>Size Inclusivity:</strong> Fashion for every body type, from petite to plus-size.</li>
-        </ul>
+            <h2>What We Offer</h2>
+            <ul>
+                <li><strong>Trendy Clothing:</strong> Dresses, tops, jeans, skirts, outerwear, and more.</li>
+                <li><strong>Chic Accessories:</strong> Bags, jewelry, scarves, and hats to elevate any look.</li>
+                <li><strong>Footwear:</strong> A wide variety of shoes for every occasion.</li>
+                <li><strong>Size Inclusivity:</strong> Fashion for every body type, from petite to plus-size.</li>
+            </ul>
+        </div>
     </div>
 
-    <!-- Gallery Section with Image Background -->
+    <!-- Gallery Section -->
     <div class="gallery">
-        <h2>Explore Our Gallery</h2>
-        <p>Discover the latest collections and explore how our fashion pieces can transform your wardrobe.</p>
+        <div class="container">
+            <h2>Explore Our Gallery</h2>
+            <p>Discover the latest collections and explore how our fashion pieces can transform your wardrobe.</p>
+        </div>
     </div>
 
-    <!-- Why Choose Us Section with Solid Color -->
+    <!-- Why Choose Us Section -->
     <div class="choose-us">
-        <h2>Why Choose Us?</h2>
-        <ul>
-            <li><strong>Affordable Fashion:</strong> Stay stylish without breaking the bank.</li>
-            <li><strong>Quality You Can Trust:</strong> Carefully curated collections from reputable brands.</li>
-            <li><strong>Fast & Free Shipping:</strong> Enjoy quick delivery with free shipping on qualifying orders.</li>
-            <li><strong>Customer-Centered Service:</strong> Our friendly support team is here to help you every step of the way.</li>
-        </ul>
+        <div class="container">
+            <h2>Why Choose Us?</h2>
+            <ul>
+                <li><strong>Affordable Fashion:</strong> Stay stylish without breaking the bank.</li>
+                <li><strong>Quality You Can Trust:</strong> Carefully curated collections from reputable brands.</li>
+                <li><strong>Fast & Free Shipping:</strong> Enjoy quick delivery with free shipping on qualifying orders.</li>
+                <li><strong>Customer-Centered Service:</strong> Our friendly support team is here to help you every step of the way.</li>
+            </ul>
+        </div>
     </div>
 
-     <!-- here is a footer section -->
-     <footer class="footer">
+    <!-- Footer Section -->
+    <footer class="footer">
         <div class="footer-container">
             <div class="footer-section">
               <div class="logo">
@@ -269,7 +282,6 @@
                     <li><a href="cart.html">Carts</a></li>
                     <li><a href="login.html">Login</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
-                    <li><a href="contact.html"></a></li>
                 </ul>
             </div>
             

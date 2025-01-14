@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Success</title>
+    <style>
+        /* Styling for the payment success page */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 50px;
+            color: #333;
+        }
+
+        .success-container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .success-message {
+            font-size: 18px;
+            color: #28a745;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .order-summary {
+            font-size: 16px;
+            color: #555;
+            margin-top: 20px;
+        }
+
+        .order-summary p {
+            margin: 5px 0;
+        }
+
+        .continue-shopping {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .continue-shopping a {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .continue-shopping a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Payment Successful</h2>
+    <div class="success-container">
+        <div class="success-message">
+            <p>Your payment has been processed successfully!</p>
+        </div>
+
+        <!-- <div class="order-summary">
+            <h3>Order Summary:</h3>
+            <p><strong>Order ID:</strong> <span id="order-id"></span></p>
+            <p><strong>Total Amount:</strong> $<span id="total-amount"></span></p>
+        </div> -->
+
+        <div class="continue-shopping">
+            <a href="home.html">Continue Shopping</a>
+        </div>
+    </div>
+
+    <script>
+        // document.addEventListener("DOMContentLoaded", function() {
+        //     const orderData = JSON.parse(localStorage.getItem("orderData"));
+
+        //     if (orderData) {
+        //         document.getElementById("order-id").textContent = orderData.orderId || "N/A";
+        //         document.getElementById("total-amount").textContent = orderData.totalPrice.toFixed(2);
+        //     } else {
+        //         alert("Order data not found.");
+        //         window.location.href = "checkout.html"; // Redirect to checkout page if data is not found
+        //     }
+
+        //     // Clear the order data from localStorage
+        //     localStorage.removeItem("orderData");
+        // });
+    </script>
+</body>
+</html>

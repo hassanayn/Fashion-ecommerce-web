@@ -1,5 +1,5 @@
 
-//carousel js
+//the folowing are the code for carousel js
 
 
 let slideIndex = 0;

@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Contact Us | Buy Me Fashion</title>
     <link rel="stylesheet" href="style.css">
+    <script src="contact.js"></script>
     <style>
         /* General Reset */
         * {
@@ -277,12 +278,19 @@
     <div class="get-in-touch">
         <h2>Get in Touch</h2>
         <p>We would love to hear from you. Please fill out the form below, and we will get back to you as soon as possible.</p>
-        <form class="contact-form" action="/submit_form" method="POST">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
+        <!-- Your Contact Form Section -->
+<form class="contact-form" action="/submit_form" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+    <button type="submit">Send Message</button>
+</form>
+
+<!-- Include the JavaScript at the end of the body -->
+<script>
+// (Paste the JavaScript code here)
+</script>
+
     </div>
 
     <!-- Google Map Section -->
@@ -337,6 +345,7 @@
                     <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
+
         </div>
         <div class="footer-bottom">
             <p>&copy; 2025 Shopper. All rights reserved.</p>
