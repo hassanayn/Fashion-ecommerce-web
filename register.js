@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
 
-        //then here Prepare the data to be sent in the POST request in the backend
+        //then here Prepare the data to be sent in the POST request or (API) in the backend
         const formData = {
             full_name: fullName,
             email: email,

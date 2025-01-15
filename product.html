@@ -7,320 +7,425 @@
     <link rel="stylesheet" href="style.css">
     <script src="cartproduct.js"></script>
     <style>
-
         /* Men's Products Section */
-.men-products {
-  padding: 40px 20px;
-  text-align: center;
-}
+        .men-products {
+            padding: 40px 20px;
+            text-align: center;
+        }
 
-.men-products h2 {
-  font-size: 36px;
-  margin-bottom: 30px;
-}
+        .men-products h2 {
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
 
-/* Product Cards Container */
-.product-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 20px;
-}
+        /* Product Cards Container */
+        .product-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+        }
 
-/* Individual Product Card */
-.product-card {
-  width: 22%;
-  max-width: 300px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-  padding: 15px;
-  text-align: center;
-}
+        /* Individual Product Card */
+        .product-card {
+            width: 22%;
+            max-width: 300px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            padding: 15px;
+            text-align: center;
+        }
 
-/* Hover effect for product card */
-.product-card:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  transform: translateY(-5px);
-}
+        /* Hover effect for product card */
+        .product-card:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+        }
 
-/* Product Image */
-.product-card img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 15px;
-}
+        /* Product Image */
+        .product-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
 
-/* Product Name and Price */
-.product-name {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
+        /* Product Name */
+        .product-name {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
 
-.price {
-  font-size: 16px;
-  color: #2a9d8f;
-  margin-bottom: 15px;
-}
+        /* Price Styling */
+        .price {
+            font-size: 18px;
+            font-weight: bold;
+            color: #2a9d8f;
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
 
-/* Add to Cart Button */
-.add-to-cart {
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #2a9d8f;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
+        /* Current price */
+        .current-price {
+            color: #2a9d8f;
+            font-size: 20px;
+            font-weight: bold;
+        }
 
-.add-to-cart:hover {
-  background-color: #1f7b67;
-}
+        /* Original price (strikethrough if discounted) */
+        .original-price {
+            color: #777;
+            font-size: 16px;
+            text-decoration: line-through;
+        }
 
-/* Media Queries for Mobile Responsiveness */
-@media (max-width: 768px) {
-  .product-cards {
-    justify-content: center;
-  }
+        /* Add to Cart Button */
+        .add-to-cart {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #2a9d8f;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
 
-  .product-card {
-    width: 45%;
-    margin-bottom: 20px;
-  }
-}
+        .add-to-cart:hover {
+            background-color: #1f7b67;
+        }
 
-@media (max-width: 480px) {
-  .product-card {
-    width: 80%;
-  }
+        /* Media Queries for Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .product-cards {
+                justify-content: center;
+            }
 
-  .product-name {
-    font-size: 16px;
-  }
+            .product-card {
+                width: 45%;
+                margin-bottom: 20px;
+            }
+        }
 
-  .price {
-    font-size: 14px;
-  }
+        @media (max-width: 480px) {
+            .product-card {
+                width: 80%;
+            }
 
-  .add-to-cart {
-    font-size: 14px;
-    padding: 8px 16px;
-  }
-}
+            .product-name {
+                font-size: 16px;
+            }
+
+            .price {
+                font-size: 14px;
+            }
+
+            .add-to-cart {
+                font-size: 14px;
+                padding: 8px 16px;
+            }
+        }
 
     </style>
 </head>
 <body>
-     <!-- Header Section -->
-<header>
-  <div class="logo">
-    <a href="home.html"><img src="images/logo/logo.png" alt="Buy Me Fashion"></a>
-  </div>
-  
-  <nav class="navbar">
-    <ul>
-      <li><a href="home.html">Home</a></li>
-      <li><a href="men.html">Men</a></li>
-      <li><a href="women.html">Women</a></li>
-      <li><a href="product.html">Accessories</a></li>
-      <li><a href="product.html">Sale</a></li>
-      <li><a href="arrival.html">New Arrivals</a></li>
-      <li><a href="login.html">Login</a></li>
-    </ul>
-  </nav>
-  
-  <div class="search-cart">
-    <input type="text" id="search-input" placeholder="Search products..." oninput="searchProducts()">
-    <div class="cart">
-      <a href="cart.html" style="text-decoration: none;">
-        <img src="images/logo/d-4.png" alt="Cart">
-      </a>
-      <span class="cart-count">3</span>
-    </div>
-  </div>
-</header>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <a href="home.html"><img src="images/logo/logo.png" alt="Buy Me Fashion"></a>
+        </div>
 
-<div>
-  <h1 style="text-align: center; margin: 15px;">OUR PRODUCT</h1>
-</div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="men.html">Men</a></li>
+                <li><a href="women.html">Women</a></li>
+                <li><a href="product.html">Accessories</a></li>
+                <li><a href="product.html">Sale</a></li>
+                <li><a href="arrival.html">New Arrivals</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
 
-<!-- Products Section -->
-<section class="men-products">
-  <h2>Men's Fashion</h2>
-  <div class="product-cards">
-      <div class="product-card">
-          <img src="images\clothes\accessories\1.jpg" alt="Men's T-shirt">
-          <p class="product-name">Arm Jeans</p>
-          <p class="price">
-              <del>$39.99</del>
-              <span style="color: #e74c3c; font-weight: bold;">$29.99</span>
-          </p>
-          <button class="add-to-cart" data-name="Arm Jeans" data-price="29.99">Add to Cart</button>
-      </div>
-      <div class="product-card">
-          <img src="images\clothes\accessories\1.jpg" alt="Men's Jeans">
-          <p class="product-name">Soft Jeans</p>
-          <p class="price">
-              <del>$49.99</del>
-              <span style="color: #e74c3c; font-weight: bold;">$39.99</span>
-          </p>
-          <button class="add-to-cart" data-name="Soft Jeans" data-price="39.99">Add to Cart</button>
-      </div>
-      <div class="product-card">
-          <img src="images/man/men-03.jpg" alt="Men's Jacket">
+        <div class="search-cart">
+            <input type="text" id="search-input" placeholder="Search products..." oninput="searchProducts()">
+            <div class="cart">
+                <a href="cart.html" style="text-decoration: none;">
+                    <img src="images/logo/d-4.png" alt="Cart">
+                </a>
+                <span class="cart-count">3</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>New Year, New You!</h1>
+            <p>Shop our latest collection and get up to 50% off on selected items.</p>
+            <button class="shop-now">Shop Now</button>
+        </div>
+    </section>
+
+    <!-- Men's Products Section -->
+    <section class="men-products">
+        <h2>Men's Fashion</h2>
+        <div class="product-cards">
+            <!-- Product Card 1 -->
+            <div class="product-card">
+                <img src="images/man/men-01.jpg" alt="Arm Jeans">
+                <p class="product-name">Arm Jeans</p>
+                <div class="price">
+                    <span class="current-price">$29.99</span>
+                    <span class="original-price"><del>$39.99</del></span>
+                </div>
+                <button class="add-to-cart" data-name="Arm Jeans" data-price="29.99">Add to Cart</button>
+            </div>
+
+            <!-- Product Card 2 -->
+            <div class="product-card">
+                <img src="images/man/men-02.jpg" alt="Soft Jeans">
+                <p class="product-name">Soft Jeans</p>
+                <div class="price">
+                    <span class="current-price">$39.99</span>
+                    <span class="original-price"><del>$49.99</del></span>
+                </div>
+                <button class="add-to-cart" data-name="Soft Jeans" data-price="39.99">Add to Cart</button>
+            </div>
+
+            <!-- Product Card 3 -->
+            <div class="product-card">
+                <img src="images/man/men-03.jpg" alt="Black Jacket">
+                <p class="product-name">Black Jacket</p>
+                <div class="price">
+                    <span class="current-price">$79.99</span>
+                    <span class="original-price"><del>$89.99</del></span>
+                </div>
+                <button class="add-to-cart" data-name="Black Jacket" data-price="79.99">Add to Cart</button>
+            </div>
+
+            <!-- Product Card 4 -->
+            <div class="product-card">
+                <img src="images/clothes/Man/1.jpg" alt="Black Jacket">
+                <p class="product-name">Black Jacket</p>
+                <div class="price">
+                    <span class="current-price">$79.99</span>
+                    <span class="original-price"><del>$89.99</del></span>
+                </div>
+                <button class="add-to-cart" data-name="Black Jacket" data-price="79.99">Add to Cart</button>
+            </div>
+
+            <!-- Product Card 5 -->
+            <div class="product-card">
+                <img src="images/clothes/Man/2.jpg" alt="Black Jacket">
+                <p class="product-name">Black Jacket</p>
+                <div class="price">
+                    <span class="current-price">$79.99</span>
+                    <span class="original-price"><del>$89.99</del></span>
+                </div>
+                <button class="add-to-cart" data-name="Black Jacket" data-price="79.99">Add to Cart</button>
+            </div>
+
+            <!-- Product Card 6 -->
+            <div class="product-card">
+                <img src="images/clothes/Man/3.jpg" alt="Black Jacket">
+                <p class="product-name">Black Jacket</p>
+                <div class="price">
+                    <span class="current-price">$79.99</span>
+                    <span class="original-price"><del>$89.99</del></span>
+                </div>
+                <button class="add-to-cart" data-name="Black Jacket" data-price="79.99">Add to Cart</button>
+            </div>
+
+            <!-- Product Card 7 -->
+            <div class="product-card">
+                <img src="images/clothes/Man/4.jpg" alt="Black Jacket">
+                <p class="product-name">Black Jacket</p>
+                <div class="price">
+                    <span class="current-price">$79.99</span>
+                    <span class="original-price"><del>$89.99</del></span>
+                </div>
+                <button class="add-to-cart" data-name="Black Jacket" data-price="79.99">Add to Cart</button>
+            </div>
+
+            <div class="product-card">
+              <img src="images/clothes/Man/4.jpg" alt="Black Jacket">
+              <p class="product-name">Black Jacket</p>
+              <div class="price">
+                  <span class="current-price">$79.99</span>
+                  <span class="original-price"><del>$89.99</del></span>
+              </div>
+              <button class="add-to-cart" data-name="Black Jacket" data-price="79.99">Add to Cart</button>
+          </div>
+          <div class="product-card">
+            <img src="images/clothes/Man/5.jpg" alt="Black Jacket">
+            <p class="product-name">Black Jacket</p>
+            <div class="price">
+                <span class="current-price">$79.99</span>
+                <span class="original-price"><del>$89.99</del></span>
+            </div>
+            <button class="add-to-cart" data-name="Black Jacket" data-price="79.99">Add to Cart</button>
+        </div>
+        <div class="product-card">
+          <img src="images/clothes/Man/6.jpg" alt="Black Jacket">
           <p class="product-name">Black Jacket</p>
-          <p class="price">
-              <del>$89.99</del>
-              <span style="color: #e74c3c; font-weight: bold;">$79.99</span>
-          </p>
+          <div class="price">
+              <span class="current-price">$79.99</span>
+              <span class="original-price"><del>$89.99</del></span>
+          </div>
           <button class="add-to-cart" data-name="Black Jacket" data-price="79.99">Add to Cart</button>
       </div>
       <div class="product-card">
-        <img src="images/clothes/Man/1.jpg" alt="Men's Jacket">
+        <img src="images/clothes/Man/7.jpg" alt="Black Jacket">
         <p class="product-name">Black Jacket</p>
-        <p class="price">
-            <del>$89.99</del>
-            <span style="color: #e74c3c; font-weight: bold;">$79.99</span>
-        </p>
+        <div class="price">
+            <span class="current-price">$79.99</span>
+            <span class="original-price"><del>$89.99</del></span>
+        </div>
         <button class="add-to-cart" data-name="Black Jacket" data-price="79.99">Add to Cart</button>
     </div>
-
     <div class="product-card">
-      <img src="images/clothes/Man/1.jpg" alt="Men's Jacket">
+      <img src="images/clothes/Man/8.jpg" alt="Black Jacket">
       <p class="product-name">Black Jacket</p>
-      <p class="price">
-          <del>$89.99</del>
-          <span style="color: #e74c3c; font-weight: bold;">$79.99</span>
-      </p>
+      <div class="price">
+          <span class="current-price">$79.99</span>
+          <span class="original-price"><del>$89.99</del></span>
+      </div>
       <button class="add-to-cart" data-name="Black Jacket" data-price="79.99">Add to Cart</button>
   </div>
+
   <div class="product-card">
-    <img src="images/clothes/Man/2.jpg" alt="Men's Jacket">
+    <img src="images/clothes/Man/9.jpg" alt="Black Jacket">
     <p class="product-name">Black Jacket</p>
-    <p class="price">
-        <del>$89.99</del>
-        <span style="color: #e74c3c; font-weight: bold;">$79.99</span>
-    </p>
+    <div class="price">
+        <span class="current-price">$79.99</span>
+        <span class="original-price"><del>$89.99</del></span>
+    </div>
     <button class="add-to-cart" data-name="Black Jacket" data-price="79.99">Add to Cart</button>
 </div>
-
 <div class="product-card">
-  <img src="images/clothes/Man/3.jpg" alt="Men's Jacket">
+  <img src="images/clothes/Man/10.jpg" alt="Black Jacket">
   <p class="product-name">Black Jacket</p>
-  <p class="price">
-      <del>$89.99</del>
-      <span style="color: #e74c3c; font-weight: bold;">$79.99</span>
-  </p>
-  <button class="add-to-cart" data-name="Black Jacket" data-price="79.99">Add to Cart</button>
-</div>
-<div class="product-card">
-  <img src="images/clothes/Man/4.jpg" alt="Men's Jacket">
-  <p class="product-name">Black Jacket</p>
-  <p class="price">
-      <del>$89.99</del>
-      <span style="color: #e74c3c; font-weight: bold;">$79.99</span>
-  </p>
-  <button class="add-to-cart" data-name="Black Jacket" data-price="79.99">Add to Cart</button>
-</div>
-
-<div class="product-card">
-  <img src="images/clothes/Man/5.jpg" alt="Men's Jacket">
-  <p class="product-name">Black Jacket</p>
-  <p class="price">
-      <del>$89.99</del>
-      <span style="color: #e74c3c; font-weight: bold;">$79.99</span>
-  </p>
-  <button class="add-to-cart" data-name="Black Jacket" data-price="79.99">Add to Cart</button>
-</div>
-
-<div class="product-card">
-  <img src="images/clothes/Man/6.jpg" alt="Men's Jacket">
-  <p class="product-name">Black Jacket</p>
-  <p class="price">
-      <del>$89.99</del>
-      <span style="color: #e74c3c; font-weight: bold;">$79.99</span>
-  </p>
-  <button class="add-to-cart" data-name="Black Jacket" data-price="79.99">Add to Cart</button>
-</div>
-
-<div class="product-card">
-  <img src="images/clothes/Man/7.jpg" alt="Men's Jacket">
-  <p class="product-name">Black Jacket</p>
-  <p class="price">
-      <del>$89.99</del>
-      <span style="color: #e74c3c; font-weight: bold;">$79.99</span>
-  </p>
-  <button class="add-to-cart" data-name="Black Jacket" data-price="79.99">Add to Cart</button>
-</div>
-
-<div class="product-card">
-  <img src="images/clothes/Man/8.jpg" alt="Men's Jacket">
-  <p class="product-name">Black Jacket</p>
-  <p class="price">
-      <del>$89.99</del>
-      <span style="color: #e74c3c; font-weight: bold;">$79.99</span>
-  </p>
-  <button class="add-to-cart" data-name="Black Jacket" data-price="79.99">Add to Cart</button>
-</div>
-
+  <div class="price">
+      <span class="current-price">$79.99</span>
+      <span class="original-price"><del>$89.99</del></span>
   </div>
-</section>
+  <button class="add-to-cart" data-name="Black Jacket" data-price="79.99">Add to Cart</button>
+</div>
+<div class="product-card">
+  <img src="images/clothes/Man/11.jpg" alt="Black Jacket">
+  <p class="product-name">Black Jacket</p>
+  <div class="price">
+      <span class="current-price">$79.99</span>
+      <span class="original-price"><del>$89.99</del></span>
+  </div>
+  <button class="add-to-cart" data-name="Black Jacket" data-price="79.99">Add to Cart</button>
+</div>
 
-<!-- Footer Section -->
-<footer class="footer">
-  <div class="footer-container">
-      <div class="footer-section">
-        <div class="logo">
-          <a href="home.html"><img src="images/logo/logo.png" alt="Shopper"></a>
+<div class="product-card">
+  <img src="images/clothes/Man/12.jpg" alt="Black Jacket">
+  <p class="product-name">Black Jacket</p>
+  <div class="price">
+      <span class="current-price">$79.99</span>
+      <span class="original-price"><del>$89.99</del></span>
+  </div>
+  <button class="add-to-cart" data-name="Black Jacket" data-price="79.99">Add to Cart</button>
+</div>
+<div class="product-card">
+  <img src="images/clothes/Man/13.jpg" alt="Black Jacket">
+  <p class="product-name">Black Jacket</p>
+  <div class="price">
+      <span class="current-price">$79.99</span>
+      <span class="original-price"><del>$89.99</del></span>
+  </div>
+  <button class="add-to-cart" data-name="Black Jacket" data-price="79.99">Add to Cart</button>
+</div>
+<div class="product-card">
+  <img src="images/clothes/Man/14.jpg" alt="Black Jacket">
+  <p class="product-name">Black Jacket</p>
+  <div class="price">
+      <span class="current-price">$79.99</span>
+      <span class="original-price"><del>$89.99</del></span>
+  </div>
+  <button class="add-to-cart" data-name="Black Jacket" data-price="79.99">Add to Cart</button>
+</div>
+<div class="product-card">
+  <img src="images/clothes/Man/15.jpg" alt="Black Jacket">
+  <p class="product-name">Black Jacket</p>
+  <div class="price">
+      <span class="current-price">$79.99</span>
+      <span class="original-price"><del>$89.99</del></span>
+  </div>
+  <button class="add-to-cart" data-name="Black Jacket" data-price="79.99">Add to Cart</button>
+</div>
+<div class="product-card">
+  <img src="images/clothes/Man/16.jpg" alt="Black Jacket">
+  <p class="product-name">Black Jacket</p>
+  <div class="price">
+      <span class="current-price">$79.99</span>
+      <span class="original-price"><del>$89.99</del></span>
+  </div>
+  <button class="add-to-cart" data-name="Black Jacket" data-price="79.99">Add to Cart</button>
+</div>
         </div>
-          <p>Your one-stop shop for the latest in fashion. Quality, style, and affordability at your fingertips.</p>
-      </div>
-      <div class="footer-section">
-          <h3>Quick Links</h3>
-          <ul>
-              <li><a href="home.html">Home</a></li>
-              <li><a href="product.html">Product</a></li>
-              <li><a href="arrival.html">New Arrivals</a></li>
-              <li><a href="cart.html">Carts</a></li>
-              <li><a href="login.html">Login</a></li>
-              <li><a href="contact.html">Contact Us</a></li>
-          </ul>
-      </div>
-      
-      <div class="footer-section">
-          <h3>Our Policy</h3>
-          <ul>
-            <li><a href="privacy.html">Privacy Policy</a></li>
-            <li><a href="term.html">Terms & Conditions</a></li>
-          </ul>
-      </div>
-      <div class="footer-section">
-        <h3>Contact Us</h3>
-        <ul>
-            <li><i class="fas fa-phone-alt"></i> 0689118095</li>
-            <li><i class="fas fa-envelope"></i> info@Shopper.com</li>
-            <li><i class="fas fa-map-marker-alt"></i> Posta, Dar es Salaam, Tanzania</li>
-        </ul>
-    </div>
-      <div class="footer-section">
-          <h3>Follow Us</h3>
-          <div class="social-icons">
-              <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-              <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-              <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-              <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
-          </div>
-      </div>
-  </div>
-  <div class="footer-bottom">
-      <p>&copy; 2025 Shopper. All rights reserved.</p>
-  </div>
-</footer>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <div class="logo">
+                    <a href="home.html"><img src="images/logo/logo.png" alt="Shopper"></a>
+                </div>
+                <p>Your one-stop shop for the latest in fashion. Quality, style, and affordability at your fingertips.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="product.html">Product</a></li>
+                    <li><a href="arrival.html">New Arrivals</a></li>
+                    <li><a href="cart.html">Carts</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Our Policy</h3>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="term.html">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><i class="fas fa-phone-alt"></i> 0689118095</li>
+                    <li><i class="fas fa-envelope"></i> info@Shopper.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Posta, Dar es Salaam, Tanzania</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Shopper. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
