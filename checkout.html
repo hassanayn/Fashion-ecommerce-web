@@ -153,16 +153,35 @@
                         totalPrice
                     };
 
-                    // Save order data to localStorage
-                    localStorage.setItem("orderData", JSON.stringify(orderData));
+                // Make a POST request to your backend to place the order
+                fetch("http://localhost:3000/checkout", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(orderData)
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.message === "Order placed successfully") {
+                        alert("Order Confirmed!");
 
-                    // Redirect to the payment page
-                    window.location.href = "payments.html"; // Adjust path to payment page as needed
-                } else {
-                    alert("Please fill in all the shipping details.");
-                }
-            });
+                        // Save order data to localStorage for payment processing
+                        localStorage.setItem("orderData", JSON.stringify(orderData));
+
+                        // Redirect to the payment page
+                        window.location.href = "payments.html";
+                    }
+                })
+                .catch(err => {
+                    alert("Error placing order");
+                    console.error(err);
+                });
+            } else {
+                alert("Please fill in all the shipping details.");
+            }
         });
+    });
     </script>
 </body>
 </html>
