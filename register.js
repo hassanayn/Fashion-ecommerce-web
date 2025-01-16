@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
         };
 
         //here it  Send the data to the backend (API) using the POST method
+        //here we creste conectiion with backend through API
         try {
             const response = await fetch('http://localhost:3000/register', {
                 method: 'POST',
@@ -72,6 +73,7 @@ document.querySelector("form").addEventListener("submit", function(event) {
     const confirmPassword = document.querySelector("#confirm-password").value;
   
     //here its send the data to the backend through POST method
+    //here we create connection btn frontend and backend through API
     fetch("/reset-password", {
       method: "POST",
       headers: {

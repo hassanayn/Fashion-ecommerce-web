@@ -5,10 +5,10 @@ document.addEventListener('DOMContentLoaded', function() {
         
         console.log("Search term: ", searchTerm);  // Debugging line
         
-        // Get all product cards
+        // here Get all product cards through serach input
         const products = document.querySelectorAll('.product-card');
         
-        // Loop through all product cards
+        // here Loop through all product cards
         products.forEach(product => {
             const productName = product.querySelector('.product-name').textContent.toLowerCase();
             
