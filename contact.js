@@ -36,6 +36,7 @@ document.addEventListener('DOMContentLoaded', function () {
         };
 
         // Send the data to the backend using fetch
+        //here frontend Connect with Backend Through API
         fetch('http://localhost:3000/submit_form', {
             method: 'POST',
             headers: {

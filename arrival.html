@@ -3,8 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>arrivals</title>
     <link rel="stylesheet" href="style.css">
+    <script src="search.js"></script>
+    <script src="cartproduct.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <style>
 
         /* Men's Products Section */
@@ -129,9 +133,9 @@
       <li><a href="home.html">Home</a></li>
       <li><a href="men.html">Men</a></li>
       <li><a href="women.html">Women</a></li>
-      <li><a href="product.html">Accessories</a></li>
-      <li><a href="register.html">Sale</a></li>
-      <li><a href="product.html">New Arrivals</a></li>
+      <li><a href="accessories.html">Accessories</a></li>
+      <li><a href="product.html">Sale</a></li>
+      <li><a href="arrival.html">New Arrivals</a></li>
       <li><a href="login.html">Login</a></li>
     </ul>
   </nav>
@@ -164,323 +168,393 @@
     <h2>NEW ARRIVALS</h2>
     <div class="product-cards">
       <div class="product-card">
-        <img src="images\clothes\arrival\1.png" alt="Men's T-shirt">
+        <img src="images\clothes\arrival\1.png" alt="watch">
         <p class="product-name">Smart watch</p>
-        <p class="price">$29.99</p> 
-        <button class="add-to-cart">Add to Cart</button>
+        <p class="price">$89.99</p> 
+          <button class="add-to-cart" data-name="smart watch" data-price="79.99">Add to Cart</button>
+         
       </div>
       <div class="product-card">
-        <img src="images\clothes\arrival\2.png" alt="Men's Jeans">
+        <img src="images\clothes\arrival\2.png" alt="six">
         <p class="product-name">Six</p>
         <p class="price">$49.99</p>
-        <button class="add-to-cart">Add to Cart</button>
+          <button class="add-to-cart" data-name="Six" data-price="79.99">Add to Cart</button>
+          
       </div>
       <div class="product-card">
-        <img src="images\clothes\arrival\3.png" alt="Men's Jacket">
+        <img src="images\clothes\arrival\3.png" alt="yebo">
         <p class="product-name">Yebo</p>
         <p class="price">$79.99</p>
-        <button class="add-to-cart">Add to Cart</button>
+          <button class="add-to-cart" data-name="Yebo" data-price="79.99">Add to Cart</button>
+          
       </div>
       <div class="product-card">
-        <img src="images\clothes\arrival\4.png" alt="Men's Sneakers">
+        <img src="images\clothes\arrival\4.png" alt=" Sneakers">
         <p class="product-name">Sneakers</p>
         <p class="price">$99.99</p>
-        <button class="add-to-cart">Add to Cart</button>
+          <button class="add-to-cart" data-name="Sneaker" data-price="79.99">Add to Cart</button>
+          
       </div>
       <div class="product-card">
-        <img src="images\clothes\arrival\5.png" alt="Men's Sneakers">
+        <img src="images\clothes\arrival\5.png" alt="head phone">
         <p class="product-name"> Meta Headphone</p>
         <p class="price">$99.99</p>
-        <button class="add-to-cart">Add to Cart</button>
+          <button class="add-to-cart" data-name="meta headphone" data-price="79.99">Add to Cart</button>
+          
       </div>
       <div class="product-card">
-        <img src="images\clothes\arrival\6.png" alt="Men's Sneakers">
+        <img src="images\clothes\arrival\6.png" alt="shirt">
         <p class="product-name">T T-Shirt</p>
         <p class="price">$99.99</p>
-        <button class="add-to-cart">Add to Cart</button>
+          <button class="add-to-cart" data-name="shirt" data-price="79.99">Add to Cart</button>
+          
       </div>
       <div class="product-card">
-        <img src="images\clothes\arrival\7.png" alt="Men's Sneakers">
-        <p class="product-name">Sneakers</p>
-        <p class="price">$99.99</p>
-        <button class="add-to-cart">Add to Cart</button>
+        <img src="images\clothes\arrival\7.png" alt="Sneakers p">
+        <p class="product-name">Sneakers P</p>
+        <p class="price">$70.99</p>
+          <button class="add-to-cart" data-name="sneaker P" data-price="79.99">Add to Cart</button>
+          
       </div>
       <div class="product-card">
-        <img src="images\clothes\arrival\8.png" alt="Men's Sneakers">
+        <img src="images\clothes\arrival\8.png" alt="bag">
         <p class="product-name">School Bag</p>
-        <p class="price">$99.99</p>
-        <button class="add-to-cart">Add to Cart</button>
+        <p class="price">$40.99</p>
+          <button class="add-to-cart" data-name="schpol bag" data-price="79.99">Add to Cart</button>
+          
       </div>
       <div class="product-card">
-        <img src="images\clothes\arrival\9.png" alt="Men's Sneakers">
+        <img src="images\clothes\arrival\9.png" alt="bag">
         <p class="product-name">Soft Bag</p>
-        <p class="price">$99.99</p>
-        <button class="add-to-cart">Add to Cart</button>
+        <p class="price">$30.99</p>
+          <button class="add-to-cart" data-name="Black Jacket" data-price="79.99">Add to Cart</button>
+          
       </div>
       <div class="product-card">
-        <img src="images\clothes\arrival\10.png" alt="Men's Sneakers">
+        <img src="images\clothes\arrival\10.png" alt="ring">
         <p class="product-name">wedding ring</p>
-        <p class="price">$99.99</p>
-        <button class="add-to-cart">Add to Cart</button>
+        <p class="price">$91.99</p>
+          <button class="add-to-cart" data-name="wedding ring" data-price="79.99">Add to Cart</button>
+          
       </div>
       <div class="product-card">
-        <img src="images\clothes\arrival\11.png" alt="Men's Sneakers">
+        <img src="images\clothes\arrival\11.png" alt="potch">
         <p class="product-name">Potch</p>
-        <p class="price">$99.99</p>
-        <button class="add-to-cart">Add to Cart</button>
+        <p class="price">$56.99</p>
+          <button class="add-to-cart" data-name="Potch" data-price="79.99">Add to Cart</button>
+          
       </div>
       <div class="product-card">
-        <img src="images\clothes\arrival\12.png" alt="Men's Sneakers">
+        <img src="images\clothes\arrival\12.png" alt="watch">
         <p class="product-name">Digital Watch</p>
-        <p class="price">$99.99</p>
-        <button class="add-to-cart">Add to Cart</button>
+        <p class="price">$39.99</p>
+          <button class="add-to-cart" data-name="Dugital watch" data-price="79.99">Add to Cart</button>
+          
       </div>
 
       <div class="product-card">
-        <img src="images\clothes\arrival\13.png" alt="Men's Sneakers">
+        <img src="images\clothes\arrival\13.png" alt="cap">
         <p class="product-name">Cap</p>
-        <p class="price">$99.99</p>
-        <button class="add-to-cart">Add to Cart</button>
+        <p class="price">$39.99</p>
+          <button class="add-to-cart" data-name="cap" data-price="79.99">Add to Cart</button>
+          
       </div>
       <div class="product-card">
-        <img src="images\clothes\arrival\14.png" alt="Men's Sneakers">
+        <img src="images\clothes\arrival\14.png" alt="brush">
         <p class="product-name">Brushes</p>
-        <p class="price">$99.99</p>
-        <button class="add-to-cart">Add to Cart</button>
+        <p class="price">$19.99</p>
+          <button class="add-to-cart" data-name="brush" data-price="29.99">Add to Cart</button>
+          
       </div>
       <div class="product-card">
-        <img src="images\clothes\arrival\15.png" alt="Men's Sneakers">
+        <img src="images\clothes\arrival\15.png" alt="flower">
         <p class="product-name">Rose Flower</p>
-        <p class="price">$99.99</p>
-        <button class="add-to-cart">Add to Cart</button>
+        <p class="price">$29.99</p>
+          <button class="add-to-cart" data-name="rose flower" data-price="49.99">Add to Cart</button>
+          
       </div>
       <div class="product-card">
-        <img src="images\clothes\arrival\16.png" alt="Men's Sneakers">
-        <p class="product-name">Men's Sneakers</p>
-        <p class="price">$99.99</p>
-        <button class="add-to-cart">Add to Cart</button>
+        <img src="images\clothes\arrival\16.png" alt="google">
+        <p class="product-name">google</p>
+        <p class="price">$09.99</p>
+          <button class="add-to-cart" data-name="google" data-price="67.99">Add to Cart</button>
+          <button class="add-to-cart">Add to Cart</button>
       </div>
       <div class="product-card">
-        <img src="images\clothes\arrival\17.png" alt="Men's Sneakers">
+        <img src="images\clothes\arrival\17.png" alt="manga">
         <p class="product-name">Manga</p>
-        <p class="price">$99.99</p>
-        <button class="add-to-cart">Add to Cart</button>
+        <p class="price">$59.99</p>
+          <button class="add-to-cart" data-name="manga" data-price="10.99">Add to Cart</button>
+          
       </div>
       <div class="product-card">
-        <img src="images\clothes\arrival\18.png" alt="Men's Sneakers">
+        <img src="images\clothes\arrival\18.png" alt="brace watch">
         <p class="product-name">Brace Watch</p>
-        <p class="price">$99.99</p>
-        <button class="add-to-cart">Add to Cart</button>
+        <p class="price">$94.99</p>
+          <button class="add-to-cart" data-name="Brace watch" data-price="79.99">Add to Cart</button>
+          
       </div>
       <div class="product-card">
-        <img src="images\clothes\arrival\19.png" alt="Men's Sneakers">
+        <img src="images\clothes\arrival\19.png" alt="yebo">
         <p class="product-name">3D Yebo</p>
-        <p class="price">$99.99</p>
-        <button class="add-to-cart">Add to Cart</button>
+        <p class="price">$96.99</p>
+          <button class="add-to-cart" data-name="3d yebo" data-price="79.99">Add to Cart</button>
+          
       </div>
       <div class="product-card">
-        <img src="images\clothes\arrival\20.png" alt="Men's Sneakers">
+        <img src="images\clothes\arrival\20.png" alt="toy">
         <p class="product-name">Toy</p>
         <p class="price">$99.99</p>
-        <button class="add-to-cart">Add to Cart</button>
+          <button class="add-to-cart" data-name="Black Jacket" data-price="79.99">Add to Cart</button>
+          
       </div>
       <div class="product-card">
         <img src="images\clothes\arrival\21.png" alt="Men's Sneakers">
-        <p class="product-name">Men's Sneakers</p>
-        <p class="price">$99.99</p>
-        <button class="add-to-cart">Add to Cart</button>
+        <p class="product-name">Toy</p>
+        <p class="price">$05.99</p>
+          <button class="add-to-cart" data-name="toy" data-price="79.99">Add to Cart</button>
+          
       </div>
       <div class="product-card">
-        <img src="images\clothes\arrival\22.png" alt="Men's Sneakers">
-        <p class="product-name">Men's Sneakers</p>
-        <p class="price">$99.99</p>
-        <button class="add-to-cart">Add to Cart</button>
+        <img src="images\clothes\arrival\22.png" alt="boot">
+        <p class="product-name">Boot</p>
+        <p class="price">$32.99</p>
+          <button class="add-to-cart" data-name="Boot" data-price="32.99">Add to Cart</button>
+          
       </div>
       <div class="product-card">
-        <img src="images\clothes\arrival\23.png" alt="Men's Sneakers">
-        <p class="product-name">Men's Sneakers</p>
-        <p class="price">$99.99</p>
-        <button class="add-to-cart">Add to Cart</button>
+        <img src="images\clothes\arrival\23.png" alt="pestal">
+        <p class="product-name">Pestal</p>
+        <p class="price">$12.99</p>
+          <button class="add-to-cart" data-name="Pestal" data-price="12.99">Add to Cart</button>
+          
       </div>
       <div class="product-card">
-        <img src="images\clothes\arrival\24.png" alt="Men's Sneakers">
-        <p class="product-name">Men's Sneakers</p>
-        <p class="price">$99.99</p>
-        <button class="add-to-cart">Add to Cart</button>
+        <img src="images\clothes\arrival\24.png" alt="drep">
+        <p class="product-name">Drep</p>
+        <p class="price">$14.99</p>
+          <button class="add-to-cart" data-name="Drep" data-price="14.99">Add to Cart</button>
+          
       </div>
 
       <div class="product-card">
-        <img src="images\clothes\arrival\24.png" alt="Men's Sneakers">
-        <p class="product-name">Men's Sneakers</p>
+        <img src="images\clothes\arrival\25.png" alt="Drepal">
+        <p class="product-name">Drepal</p>
         <p class="price">$99.99</p>
-        <button class="add-to-cart">Add to Cart</button>
+          <button class="add-to-cart" data-name="Drepal" data-price="13.99">Add to Cart</button>
+          
       </div>
       <div class="product-card">
-        <img src="images\clothes\arrival\24.png" alt="Men's Sneakers">
-        <p class="product-name">Men's Sneakers</p>
+        <img src="images\clothes\arrival\26.png" alt="drep">
+        <p class="product-name">Drep</p>
         <p class="price">$99.99</p>
-        <button class="add-to-cart">Add to Cart</button>
+          <button class="add-to-cart" data-name="Black Jacket" data-price="79.99">Add to Cart</button>
+          
       </div>
       <div class="product-card">
-        <img src="images\clothes\arrival\2.png" alt="Men's Sneakers">
-        <p class="product-name">Men's Sneakers</p>
+        <img src="images\clothes\arrival\2.png" alt="sneaker">
+        <p class="product-name">Fit Sneakers</p>
         <p class="price">$99.99</p>
-        <button class="add-to-cart">Add to Cart</button>
+          <button class="add-to-cart" data-name="Fit sneaker" data-price="94.99">Add to Cart</button>
+          
       </div>
       <div class="product-card">
-        <img src="images\clothes\arrival\26.png" alt="Men's Sneakers">
-        <p class="product-name">Men's Sneakers</p>
-        <p class="price">$99.99</p>
-        <button class="add-to-cart">Add to Cart</button>
+        <img src="images\clothes\arrival\26.png" alt="oil">
+        <p class="product-name">Boi oil</p>
+        <p class="price">$18.99</p>
+          <button class="add-to-cart" data-name="Boi oil" data-price="18.99">Add to Cart</button>
+          
       </div>
       <div class="product-card">
-        <img src="images\clothes\arrival\27.png" alt="Men's Sneakers">
-        <p class="product-name">Men's Sneakers</p>
-        <p class="price">$99.99</p>
-        <button class="add-to-cart">Add to Cart</button>
+        <img src="images\clothes\arrival\27.png" alt="dice">
+        <p class="product-name">Dice</p>
+        <p class="price">$34.99</p>
+          <button class="add-to-cart" data-name="dicce" data-price="17.99">Add to Cart</button>
+          
       </div>
       <div class="product-card">
-        <img src="images\clothes\arrival\28.png" alt="Men's Sneakers">
-        <p class="product-name">Men's Sneakers</p>
-        <p class="price">$99.99</p>
-        <button class="add-to-cart">Add to Cart</button>
+        <img src="images\clothes\arrival\28.png" alt="Mkorogo">
+        <p class="product-name">Mkorogo</p>
+        <p class="price">$20.99</p>
+          <button class="add-to-cart" data-name="Mkorogo" data-price="20.99">Add to Cart</button>
+          
       </div>
       <div class="product-card">
-        <img src="images\clothes\arrival\29.png" alt="Men's Sneakers">
-        <p class="product-name">Men's Sneakers</p>
-        <p class="price">$99.99</p>
-        <button class="add-to-cart">Add to Cart</button>
+        <img src="images\clothes\arrival\29.png" alt="dell pc">
+        <p class="product-name">Dell x piron</p>
+        <p class="price">$200.99</p>
+          <button class="add-to-cart" data-name="dell" data-price="200.99">Add to Cart</button>
+          
       </div>
       <div class="product-card">
-        <img src="images\clothes\arrival\30.png" alt="Men's Sneakers">
-        <p class="product-name">Men's Sneakers</p>
+        <img src="images\clothes\arrival\30.png" alt="flower">
+        <p class="product-name">Flower shell</p>
         <p class="price">$99.99</p>
-        <button class="add-to-cart">Add to Cart</button>
+          <button class="add-to-cart" data-name="flower shell" data-price="14.99">Add to Cart</button>
+          
       </div>
       <div class="product-card">
-        <img src="images\clothes\arrival\31.png" alt="Men's Sneakers">
-        <p class="product-name">Men's Sneakers</p>
-        <p class="price">$99.99</p>
-        <button class="add-to-cart">Add to Cart</button>
+        <img src="images\clothes\arrival\31.png" alt="beauty">
+        <p class="product-name">Beuoty det</p>
+        <p class="price">$23.25</p>
+          <button class="add-to-cart" data-name="Beauty det" data-price="25.99">Add to Cart</button>
+          
       </div>
       <div class="product-card">
         <img src="images\clothes\arrival\32.png" alt="Men's Sneakers">
-        <p class="product-name">Men's Sneakers</p>
-        <p class="price">$99.99</p>
-        <button class="add-to-cart">Add to Cart</button>
+        <p class="product-name">Ring seeys</p>
+        <p class="price">$65.99</p>
+          <button class="add-to-cart" data-name="Ring seys" data-price="65.99">Add to Cart</button>
+          
       </div>
       <div class="product-card">
-        <img src="images\clothes\arrival\34.png" alt="Men's Sneakers">
-        <p class="product-name">Men's Sneakers</p>
-        <p class="price">$99.99</p>
-        <button class="add-to-cart">Add to Cart</button>
+        <img src="images\clothes\arrival\34.png" alt="watch">
+        <p class="product-name">Bing Wartch</p>
+        <p class="price">$100.99</p>
+          <button class="add-to-cart" data-name="Big watch" data-price="100.99">Add to Cart</button>
+          
       </div>
       <div class="product-card">
-        <img src="images\clothes\arrival\35.png" alt="Men's Sneakers">
-        <p class="product-name">Men's Sneakers</p>
-        <p class="price">$99.99</p>
-        <button class="add-to-cart">Add to Cart</button>
+        <img src="images\clothes\arrival\35.png" alt="sniper">
+        <p class="product-name">Snipper</p>
+        <p class="price">$44.99</p>
+          <button class="add-to-cart" data-name="Sneeper" data-price="45.99">Add to Cart</button>
+          
       </div>
       <div class="product-card">
-        <img src="images\clothes\arrival\36.png" alt="Men's Sneakers">
-        <p class="product-name">Men's Sneakers</p>
-        <p class="price">$99.99</p>
-        <button class="add-to-cart">Add to Cart</button>
+        <img src="images\clothes\arrival\36.png" alt="boot">
+        <p class="product-name">Climb boot</p>
+        <p class="price">$19.99</p>
+          <button class="add-to-cart" data-name="Climb boot" data-price="19.99">Add to Cart</button>
+          
       </div>
       <div class="product-card">
-        <img src="images\clothes\arrival\37.png" alt="Men's Sneakers">
-        <p class="product-name">Men's Sneakers</p>
-        <p class="price">$99.99</p>
-        <button class="add-to-cart">Add to Cart</button>
+        <img src="images\clothes\arrival\37.png" alt=" Sneakers">
+        <p class="product-name">white Sneakers</p>
+        <p class="price">$88.99</p>
+          <button class="add-to-cart" data-name="Red sneakers" data-price="88.99">Add to Cart</button>
+          
       </div>
       <div class="product-card">
-        <img src="images\clothes\arrival\38.png" alt="Men's Sneakers">
-        <p class="product-name">Men's Sneakers</p>
+        <img src="images\clothes\arrival\38.png" alt=" Sneakers">
+        <p class="product-name">light Sneakers</p>
         <p class="price">$99.99</p>
-        <button class="add-to-cart">Add to Cart</button>
+          <button class="add-to-cart" data-name="lightsneaker" data-price="79.99">Add to Cart</button>
+          
       </div>
       <div class="product-card">
         <img src="images\clothes\arrival\39.png" alt="Men's Sneakers">
-        <p class="product-name">Men's Sneakers</p>
-        <p class="price">$99.99</p>
-        <button class="add-to-cart">Add to Cart</button>
+        <p class="product-name">Green Sneakers</p>
+        <p class="price">$23.99</p>
+          <button class="add-to-cart" data-name="Green sneaker" data-price="79.99">Add to Cart</button>
+          
       </div>
       <div class="product-card">
         <img src="images\clothes\arrival\40.png" alt="Men's Sneakers">
-        <p class="product-name">Men's Sneakers</p>
-        <p class="price">$99.99</p>
-        <button class="add-to-cart">Add to Cart</button>
+        <p class="product-name">Feroor</p>
+        <p class="price">$27.99</p>
+          <button class="add-to-cart" data-name="feroort" data-price="27.99">Add to Cart</button>
+          
       </div>
       <div class="product-card">
-        <img src="images\clothes\arrival\41.png" alt="Men's Sneakers">
-        <p class="product-name">Men's Sneakers</p>
+        <img src="images\clothes\arrival\41.png" alt="boot">
+        <p class="product-name">Boot</p>
         <p class="price">$99.99</p>
-        <button class="add-to-cart">Add to Cart</button>
+          <button class="add-to-cart" data-name="boot" data-price="79.99">Add to Cart</button>
+          
       </div>
       <div class="product-card">
-        <img src="images\clothes\arrival\42.png" alt="Men's Sneakers">
-        <p class="product-name">Men's Sneakers</p>
+        <img src="images\clothes\arrival\42.png" alt="fane">
+        <p class="product-name">Fane</p>
         <p class="price">$99.99</p>
-        <button class="add-to-cart">Add to Cart</button>
+          <button class="add-to-cart" data-name="fane" data-price="79.99">Add to Cart</button>
+          
       </div>
       <div class="product-card">
-        <img src="images\clothes\arrival\44.png" alt="Men's Sneakers">
-        <p class="product-name">Men's Sneakers</p>
-        <p class="price">$99.99</p>
-        <button class="add-to-cart">Add to Cart</button>
+        <img src="images\clothes\arrival\44.png" alt="speaker">
+        <p class="product-name">Speaker</p>
+        <p class="price">$16.99</p>
+          <button class="add-to-cart" data-name="Black Jacket" data-price="39.99">Add to Cart</button>
+          
       </div>
       <div class="product-card">
-        <img src="images\clothes\arrival\45.png" alt="Men's Sneakers">
-        <p class="product-name">Men's Sneakers</p>
-        <p class="price">$99.99</p>
-        <button class="add-to-cart">Add to Cart</button>
+        <img src="images\clothes\arrival\45.png" alt="raba">
+        <p class="product-name">Raba</p>
+        <p class="price">$19.99</p>
+          <button class="add-to-cart" data-name="raba" data-price="19.99">Add to Cart</button>
+          
       </div>
       <div class="product-card">
-        <img src="images\clothes\arrival\46.png" alt="Men's Sneakers">
-        <p class="product-name">Men's Sneakers</p>
+        <img src="images\clothes\arrival\46.png" alt="six">
+        <p class="product-name">heavy Six</p>
         <p class="price">$99.99</p>
-        <button class="add-to-cart">Add to Cart</button>
+          <button class="add-to-cart" data-name="six 4" data-price="89.99">Add to Cart</button>
+         
       </div>
       <div class="product-card">
-        <img src="images\clothes\arrival\47.png" alt="Men's Sneakers">
-        <p class="product-name">Men's Sneakers</p>
-        <p class="price">$99.99</p>
-        <button class="add-to-cart">Add to Cart</button>
+        <img src="images\clothes\arrival\47.png" alt="ring">
+        <p class="product-name">Ring</p>
+        <p class="price">$23.99</p>
+          <button class="add-to-cart" data-name="ring" data-price="79.99">Add to Cart</button>
+          
       </div>
       <div class="product-card">
-        <img src="images\clothes\arrival\48.png" alt="Men's Sneakers">
-        <p class="product-name">Men's Sneakers</p>
-        <p class="price">$99.99</p>
-        <button class="add-to-cart">Add to Cart</button>
+        <img src="images\clothes\arrival\48.png" alt="watch">
+        <p class="product-name">Watch</p>
+        <p class="price">$109.99</p>
+          <button class="add-to-cart" data-name="watch" data-price="109.99">Add to Cart</button>
+          
       </div>
       <div class="product-card">
-        <img src="images\clothes\arrival\49.png" alt="Men's Sneakers">
-        <p class="product-name">Men's Sneakers</p>
+        <img src="images\clothes\arrival\49.png" alt="heo">
+        <p class="product-name">heo</p>
         <p class="price">$99.99</p>
-        <button class="add-to-cart">Add to Cart</button>
+          <button class="add-to-cart" data-name="heo" data-price="10.99">Add to Cart</button>
+          
       </div>
       <div class="product-card">
-        <img src="images\clothes\arrival\50.png" alt="Men's Sneakers">
-        <p class="product-name">Men's Sneakers</p>
-        <p class="price">$99.99</p>
-        <button class="add-to-cart">Add to Cart</button>
+        <img src="images\clothes\arrival\50.png" alt="baby">
+        <p class="product-name">Baby</p>
+        <p class="price">$69.99</p>
+          <button class="add-to-cart" data-name="Baby" data-price="69.99">Add to Cart</button>
+          
       </div>
       <div class="product-card">
-        <img src="images\clothes\arrival\12.png" alt="Men's Sneakers">
-        <p class="product-name">Men's Sneakers</p>
-        <p class="price">$99.99</p>
-        <button class="add-to-cart">Add to Cart</button>
+          <!-- <button class="add-to-cart" data-name="Black Jacket" data-price="79.99">Add to Cart</button> -->
+          <img src="images\clothes\arrival\12.png" alt="watch">
+        <p class="product-name">Round watch</p>
+        <p class="price">$49.99</p>
+          <button class="add-to-cart" data-name="round watch" data-price="17.99">Add to Cart</button>
+          
       </div>
       <div class="product-card">
-        <img src="images\clothes\arrival\14.png" alt="Men's Sneakers">
-        <p class="product-name">Men's Sneakers</p>
-        <p class="price">$99.99</p>
-        <button class="add-to-cart">Add to Cart</button>
+        <img src="images\clothes\arrival\14.png" alt="braces">
+        <p class="product-name">Eye braces</p>
+        <p class="price">$92.99</p>
+          <button class="add-to-cart" data-name="eye bracess" data-price="18.99">Add to Cart</button>
+          
       </div>
 
     </div>
   </section>
   
+
+
+  <!-- !-- Payment Methods Section --> 
+      <div class="payment-methods">
+        <h2>We Accept Payments From</h2>
+        <p>Choose your preferred payment method from the following options.</p>
+        
+        <!-- Payment Method Icons -->
+        <div class="payment-icons">
+            <img src="images\payment\visa.png" alt="Visa">
+            <img src="images\payment\mc.png" alt="MasterCard">
+            <img src="images\payment\paypal.jpg" alt="PayPal">
+            <img src="images\payment\pp.png" alt="Apple Pay">
+            <img src="images\payment\maestro.png" alt="Google Pay">
+            <img src="images\payment\maestro.png" alt="American Express">
+        </div>
+    </div>
 
     <!-- here is a footer section -->
     <footer class="footer">
@@ -522,10 +596,19 @@
           <div class="footer-section">
               <h3>Follow Us</h3>
               <div class="social-icons">
-                  <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                  <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                  <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                  <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                  <!-- Social Media Links -->
+                  <a href="https://www.facebook.com/share/YiW1mhjWb84LWc1d/?mibextid=qi2Omg" class="social-icon" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://x.com/hassankashmal?t=QzDECh-Hv1emIwT8iEyvBQ&s=01" class="social-icon" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com/hassanayn_kashmal?igsh=bDJ0emc1bXB2MmU0" class="social-icon" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.youtube.com/channel/shopper" class="social-icon" target="_blank">
+                    <i class="fab fa-youtube"></i>
+                </a>
               </div>
           </div>
       </div>

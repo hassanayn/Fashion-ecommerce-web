@@ -57,26 +57,35 @@ window.onscroll = function () {
   }
 };
 
+document.addEventListener('DOMContentLoaded', function() {
+  function searchProducts() {
+      // Get the search term
+      const searchTerm = document.getElementById('search-input').value.toLowerCase();
+      
+      console.log("Search term: ", searchTerm);  // Debugging line
+      
+      // Get all product cards
+      const products = document.querySelectorAll('.product-card');
+      
+      // Loop through all product cards
+      products.forEach(product => {
+          const productName = product.querySelector('.product-name').textContent.toLowerCase();
+          
+          console.log("Product Name: ", productName);  // Debugging line
+          
+          // Check if the product name contains the search term
+          if (productName.includes(searchTerm)) {
+              // Show the product if it matches the search term
+              product.style.display = '';
+          } else {
+              // Hide the product if it does not match
+              product.style.display = 'none';
+          }
+      });
+  }
+  
+  // Attach the search function
+  document.getElementById('search-input').addEventListener('input', searchProducts);
+});
 
 
-// search
-
-function searchProducts() {
-  // Get the search input value and convert it to lowercase
-  const searchTerm = document.getElementById('search-input').value.toLowerCase();
-
-  // Get all product elements
-  const products = document.querySelectorAll('.product');
-
-  // Loop through all products and hide those that don't match the search term
-  products.forEach(product => {
-      const productName = product.getAttribute('data-name').toLowerCase();
-
-      // If the product name includes the search term, show the product, otherwise hide it
-      if (productName.includes(searchTerm)) {
-          product.style.display = 'block';
-      } else {
-          product.style.display = 'none';
-      }
-  });
-}

@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
         };
 
         //then its Send the data to the backend (API) through the POST method
+        //here we create connection betn frontend and backend through API
         try {
             const response = await fetch('http://localhost:3000/login', {
                 method: 'POST',

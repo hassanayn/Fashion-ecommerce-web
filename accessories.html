@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>accessories</title>
     <link rel="stylesheet" href="style.css">
     <script src="cartproduct.js"></script>
+    <script src="search.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
 
         /* Men's Products Section */
@@ -65,6 +67,23 @@
   font-size: 16px;
   color: #2a9d8f;
   margin-bottom: 15px;
+}
+
+/* Style for initial price */
+.initial-price {
+  font-size: 18px;
+  color: #2a9d8f; /* Keeping the initial price color in green */
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+/* Style for deleted (original) price */
+.del-price {
+  color: red; /* Make the deleted price red */
+  text-decoration: line-through;
+  font-weight: bold;
+  font-size: 18px;
+  margin-left: 5px;
 }
 
 /* Add to Cart Button */
@@ -128,7 +147,7 @@
       <li><a href="home.html">Home</a></li>
       <li><a href="men.html">Men</a></li>
       <li><a href="women.html">Women</a></li>
-      <li><a href="product.html">Accessories</a></li>
+      <li><a href="accessories.html">Accessories</a></li>
       <li><a href="product.html">Sale</a></li>
       <li><a href="arrival.html">New Arrivals</a></li>
       <li><a href="login.html">Login</a></li>
@@ -146,136 +165,171 @@
   </div>
 </header>
 
-<!-- Hero Section -->
-<section class="hero">
-    <div class="hero-content">
-      <h1>New Year, New You!</h1>
-      <p>Shop our latest collection and get up to 50% off on selected items.</p>
-      <button class="shop-now">Shop Now</button>
-    </div>
-</section>
-
 <!-- Men's Products Section -->
 <section class="men-products">
-  <h2>Men's Fashion</h2>
+  <h2>Explore More accessories</h2>
   <div class="product-cards">
       <div class="product-card">
-          <img src="images/man/men-01.jpg" alt="Men's T-shirt">
-          <p class="product-name">Arm Jeans</p>
+          <img src="images/clothes/accessory2/a.jpg" alt="Men's T-shirt">
+          <p class="product-name">Watch Pro</p>
           <p class="price">
-              <del>$39.99</del>
-              <span style="color: #e74c3c; font-weight: bold;">$29.99</span>
+              <span class="initial-price">$39.99</span>
+              <span class="del-price"><del>$29.99</del></span>
           </p>
-          <button class="add-to-cart" data-name="Arm Jeans" data-price="29.99">Add to Cart</button>
+          <button class="add-to-cart" data-name="watch" data-price="29.99">Add to Cart</button>
       </div>
       <div class="product-card">
-          <img src="images/man/men-02.jpg" alt="Men's Jeans">
-          <p class="product-name">Soft Jeans</p>
+          <img src="images/clothes/accessory2/b.jpg" alt="Men's Jeans">
+          <p class="product-name">Ring Bell</p>
           <p class="price">
-              <del>$49.99</del>
-              <span style="color: #e74c3c; font-weight: bold;">$39.99</span>
+              <span class="initial-price">$34.99</span>
+              <span class="del-price"><del>$39.99</del></span>
           </p>
           <button class="add-to-cart" data-name="Soft Jeans" data-price="39.99">Add to Cart</button>
       </div>
       <div class="product-card">
-          <img src="images/man/men-03.jpg" alt="Men's Jacket">
-          <p class="product-name">Black Jacket</p>
+          <img src="images/clothes/accessory2/c.jpg" alt="Men's Jacket">
+          <p class="product-name">Culture</p>
           <p class="price">
-              <del>$89.99</del>
-              <span style="color: #e74c3c; font-weight: bold;">$79.99</span>
+              <span class="initial-price">$89.99</span>
+              <span class="del-price"><del>$79.99</del></span>
           </p>
           <button class="add-to-cart" data-name="Black Jacket" data-price="79.99">Add to Cart</button>
       </div>
       <div class="product-card">
-        <img src="images/clothes/Man/1.jpg" alt="Men's Jacket">
-        <p class="product-name">Black Jacket</p>
+        <img src="images/clothes/accessory2/d.jpg" alt="Men's Jacket">
+        <p class="product-name">Veind</p>
         <p class="price">
-            <del>$89.99</del>
-            <span style="color: #e74c3c; font-weight: bold;">$79.99</span>
+            <span class="initial-price">$89.99</span>
+            <span class="del-price"><del>$79.99</del></span>
         </p>
         <button class="add-to-cart" data-name="Black Jacket" data-price="79.99">Add to Cart</button>
     </div>
 
     <div class="product-card">
-      <img src="images/clothes/Man/1.jpg" alt="Men's Jacket">
-      <p class="product-name">Black Jacket</p>
+      <img src="images/clothes/accessory2/e.jpg" alt="Men's Jacket">
+      <p class="product-name">Ring</p>
       <p class="price">
-          <del>$89.99</del>
-          <span style="color: #e74c3c; font-weight: bold;">$79.99</span>
+          <span class="initial-price">$89.99</span>
+          <span class="del-price"><del>$79.99</del></span>
       </p>
       <button class="add-to-cart" data-name="Black Jacket" data-price="79.99">Add to Cart</button>
   </div>
   <div class="product-card">
-    <img src="images/clothes/Man/2.jpg" alt="Men's Jacket">
-    <p class="product-name">Black Jacket</p>
+    <img src="images/clothes/accessory2/f.jpg" alt="Men's Jacket">
+    <p class="product-name">Neck pi</p>
     <p class="price">
-        <del>$89.99</del>
-        <span style="color: #e74c3c; font-weight: bold;">$79.99</span>
+        <span class="initial-price">$89.99</span>
+        <span class="del-price"><del>$79.99</del></span>
     </p>
     <button class="add-to-cart" data-name="Black Jacket" data-price="79.99">Add to Cart</button>
 </div>
 
 <div class="product-card">
-  <img src="images/clothes/Man/3.jpg" alt="Men's Jacket">
-  <p class="product-name">Black Jacket</p>
+  <img src="images/clothes/accessory2/g.jpg" alt="Men's Jacket">
+  <p class="product-name">Sense ring</p>
   <p class="price">
-      <del>$89.99</del>
-      <span style="color: #e74c3c; font-weight: bold;">$79.99</span>
+      <span class="initial-price">$89.99</span>
+      <span class="del-price"><del>$79.99</del></span>
   </p>
   <button class="add-to-cart" data-name="Black Jacket" data-price="79.99">Add to Cart</button>
 </div>
 <div class="product-card">
-  <img src="images/clothes/Man/4.jpg" alt="Men's Jacket">
-  <p class="product-name">Black Jacket</p>
+  <img src="images/clothes/accessory2/h.jpg" alt="Men's Jacket">
+  <p class="product-name">Dimond Ring</p>
   <p class="price">
-      <del>$89.99</del>
-      <span style="color: #e74c3c; font-weight: bold;">$79.99</span>
-  </p>
-  <button class="add-to-cart" data-name="Black Jacket" data-price="79.99">Add to Cart</button>
-</div>
-
-<div class="product-card">
-  <img src="images/clothes/Man/5.jpg" alt="Men's Jacket">
-  <p class="product-name">Black Jacket</p>
-  <p class="price">
-      <del>$89.99</del>
-      <span style="color: #e74c3c; font-weight: bold;">$79.99</span>
+      <span class="initial-price">$89.99</span>
+      <span class="del-price"><del>$79.99</del></span>
   </p>
   <button class="add-to-cart" data-name="Black Jacket" data-price="79.99">Add to Cart</button>
 </div>
 
 <div class="product-card">
-  <img src="images/clothes/Man/6.jpg" alt="Men's Jacket">
-  <p class="product-name">Black Jacket</p>
+  <img src="images/clothes/accessory2/i.jpg" alt="Men's Jacket">
+  <p class="product-name">Vowed</p>
   <p class="price">
-      <del>$89.99</del>
-      <span style="color: #e74c3c; font-weight: bold;">$79.99</span>
+      <span class="initial-price">$89.99</span>
+      <span class="del-price"><del>$79.99</del></span>
   </p>
   <button class="add-to-cart" data-name="Black Jacket" data-price="79.99">Add to Cart</button>
 </div>
 
 <div class="product-card">
-  <img src="images/clothes/Man/7.jpg" alt="Men's Jacket">
-  <p class="product-name">Black Jacket</p>
+  <img src="images/clothes/accessory2/j.jpg" alt="Men's Jacket">
+  <p class="product-name">Blated ring</p>
   <p class="price">
-      <del>$89.99</del>
-      <span style="color: #e74c3c; font-weight: bold;">$79.99</span>
+      <span class="initial-price">$89.99</span>
+      <span class="del-price"><del>$79.99</del></span>
   </p>
   <button class="add-to-cart" data-name="Black Jacket" data-price="79.99">Add to Cart</button>
 </div>
 
 <div class="product-card">
-  <img src="images/clothes/Man/8.jpg" alt="Men's Jacket">
-  <p class="product-name">Black Jacket</p>
+  <img src="images/accessories/e.jpg" alt="Men's Jacket">
+  <p class="product-name">Wed ring</p>
   <p class="price">
-      <del>$89.99</del>
-      <span style="color: #e74c3c; font-weight: bold;">$79.99</span>
+      <span class="initial-price">$89.99</span>
+      <span class="del-price"><del>$79.99</del></span>
+  </p>
+  <button class="add-to-cart" data-name="Black Jacket" data-price="79.99">Add to Cart</button>
+</div>
+
+<div class="product-card">
+  <img src="images/accessories/f.jpg" alt="Men's Jacket">
+  <p class="product-name">Neck Piple</p>
+  <p class="price">
+      <span class="initial-price">$89.99</span>
+      <span class="del-price"><del>$79.99</del></span>
+  </p>
+  <button class="add-to-cart" data-name="Black Jacket" data-price="79.99">Add to Cart</button>
+</div>
+
+<div class="product-card">
+  <img src="images/accessories/g.jpg" alt="Men's Jacket">
+  <p class="product-name">Solid Guo</p>
+  <p class="price">
+      <span class="initial-price">$89.99</span>
+      <span class="del-price"><del>$79.99</del></span>
+  </p>
+  <button class="add-to-cart" data-name="Black Jacket" data-price="79.99">Add to Cart</button>
+</div>
+<div class="product-card">
+  <img src="images/accessories/h.jpg" alt="Men's Jacket">
+  <p class="product-name">Honor</p>
+  <p class="price">
+      <span class="initial-price">$89.99</span>
+      <span class="del-price"><del>$79.99</del></span>
+  </p>
+  <button class="add-to-cart" data-name="Black Jacket" data-price="79.99">Add to Cart</button>
+</div>
+<div class="product-card">
+  <img src="images/accessories/i.jpg" alt="Men's Jacket">
+  <p class="product-name"> Seeger</p>
+  <p class="price">
+      <span class="initial-price">$89.99</span>
+      <span class="del-price"><del>$79.99</del></span>
   </p>
   <button class="add-to-cart" data-name="Black Jacket" data-price="79.99">Add to Cart</button>
 </div>
 
   </div>
 </section>
+
+
+      <div class="payment-methods">
+        <h2>We Accept Payments From</h2>
+        <p>Choose your preferred payment method from the following options.</p>
+        
+        <!-- Payment Method Icons -->
+        <div class="payment-icons">
+            <img src="images\payment\visa.png" alt="Visa">
+            <img src="images\payment\mc.png" alt="MasterCard">
+            <img src="images\payment\paypal.jpg" alt="PayPal">
+            <img src="images\payment\pp.png" alt="Apple Pay">
+            <img src="images\payment\maestro.png" alt="Google Pay">
+            <img src="images\payment\maestro.png" alt="American Express">
+        </div>
+    </div>
 
 <!-- Footer Section -->
 <footer class="footer">
