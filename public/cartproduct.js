@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
             localStorage.setItem("cart", JSON.stringify(cart));
 
             // Optionally, show an alert or update the cart link with the item count
-            alert(productName + " has been added to the cart!");
+            // alert(productName + " has been added to the cart!");
         });
     });
 });
