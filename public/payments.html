@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <style>
+        /* Styling for the payment page */
+        body { 
+            font-family: Arial, sans-serif; 
+            margin: 0; padding: 0; 
+            background-color: #f4f4f4; }
+
+        h2 { 
+            text-align: center; 
+            margin-top: 30px; color: #333; }
+
+        .payment-container {
+             max-width: 800px; 
+             margin: 30px auto; padding: 20px; 
+             background-color: #fff; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); }
+
+        .payment-form input, .payment-form select { 
+            width: 100%; padding: 10px;
+             margin: 10px 0; 
+             border-radius: 5px; 
+             border: 1px solid #ddd; 
+             font-size: 16px; }
+
+        .payment-form button {
+             background-color: #007bff;
+              color: white; border: none;
+               padding: 12px 20px; 
+               cursor: pointer;
+                border-radius: 5px; 
+                font-size: 16px; }
+        
+        .payment-form button:hover {
+             background-color: #0056b3; }
+    </style>
+</head>
+<body>
+    <h2>Payment</h2>
+    <div class="payment-container">
+        <div id="payment-info"></div>
+        <div class="payment-form">
+            <h3>Payment Details</h3>
+            <input type="text" id="payment-method" placeholder="Payment Method (e.g., Credit Card)" required>
+            <input type="number" id="payment-amount" placeholder="Amount" readonly required>
+            <button id="complete-payment">Complete Payment</button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const orderData = JSON.parse(localStorage.getItem("orderData"));
+            const paymentAmountElement = document.getElementById("payment-amount");
+
+            if (orderData) {
+                paymentAmountElement.value = orderData.totalPrice.toFixed(2);
+            } else {
+                alert("Order not found.");
+                window.location.href = "checkout.html"; // Redirect to checkout page
+            }
+
+            document.getElementById("complete-payment").addEventListener("click", function() {
+                const paymentMethod = document.getElementById("payment-method").value;
+                const amount = paymentAmountElement.value;
+                const orderId = orderData.orderId || 1; // Example order ID, replace with actual order ID logic
+
+                if (paymentMethod && amount) {
+                    const paymentData = { orderId, paymentStatus: "completed", paymentMethod, amount };
+
+                    fetch("http://localhost:3000/payment", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify(paymentData)
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        alert("Payment successful!");
+                        localStorage.removeItem("orderData");
+                        window.location.href = "payment-success.html"; // Redirect to success page
+                    })
+                    .catch(err => {
+                        alert("Error processing payment.");
+                        console.error(err);
+                    });
+                } else {
+                    alert("Please fill in all payment details.");
+                }
+            });
+        });
+    </script>
+</body>
+</html>

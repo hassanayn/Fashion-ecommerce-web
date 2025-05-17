@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="contact.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Body */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+       
+        
+
+        /* Contact Hero Section with Background */
+        .contact-hero {
+            background: url('images/clothes/Man/18.jpg') no-repeat center center/cover;
+            height: 500px;
+            padding: 80px 20px;
+            text-align: center;
+            color: white;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-hero h1 {
+            font-size: 4rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+
+        .contact-hero p {
+            font-size: 1.2rem;
+            animation: fadeInUp 2s ease-in-out;
+        }
+
+        /* Card Container */
+        .contact-cards {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            padding: 60px 20px;
+            margin-top: -50px;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .card p {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .card a {
+            color: #ff9800;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .card a:hover {
+            color: #e68900;
+        }
+
+        /* Get in Touch Section */
+        .get-in-touch {
+            background-color: #fff;
+            padding: 60px 20px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .get-in-touch h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .get-in-touch p {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            max-width: 600px;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+            color: #333;
+        }
+
+        .contact-form button {
+            background-color: #ff9800;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #e68900;
+        }
+
+        /* Google Map Section */
+        .map-container {
+            width: 100%;
+            height: 400px;
+            margin-top: 40px;
+        }
+
+
+
+        /* Animations */
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .contact-hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .contact-cards {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .card {
+                width: 80%;
+            }
+
+            .get-in-touch .contact-form input,
+            .get-in-touch .contact-form textarea {
+                font-size: 1rem;
+            }
+
+            .get-in-touch .contact-form button {
+                font-size: 1rem;
+                padding: 12px 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+ <!-- Header Section -->
+ <header>
+    <div class="logo">
+      <a href="home.html"><img src="images/logo/logo.png" alt="Buy Me Fashion"></a>
+    </div>
+    
+   
+  
+    <nav class="navbar">
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="men.html">Men</a></li>
+        <li><a href="women.html">Women</a></li>
+        <li><a href="accessories.html">Accessories</a></li>
+        <li><a href="product.html">Sale</a></li>
+        <li><a href="arrival.html">New Arrivals</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+    
+    <div class="search-cart">
+      <input type="text" id="search-input" placeholder="Search products..." oninput="searchProducts()">
+      <div class="cart">
+        <a href="cart.html" style="text-decoration: none;">
+          <img src="images/logo/d-4.png" alt="Cart">
+        </a>
+        <span class="cart-count">3</span>
+      </div>
+    </div>
+  </header>
+    
+
+    <!-- Contact Hero Section with Image -->
+    <div class="contact-hero">
+        <h1>Contact Us</h1>
+        <p>We'd love to hear from you! Whether you have questions, feedback, or need assistance, feel free to reach out.</p>
+    </div>
+
+    <!-- Contact Information Cards Section -->
+    <div class="contact-cards">
+        <!-- Address Card -->
+        <div class="card">
+            <h3>Our Address</h3>
+            <p>Posta, Dar es Salaam</p>
+            <a href="https://www.google.com/maps" target="_blank">View on Map</a>
+        </div>
+
+        <!-- Email Card -->
+        <div class="card">
+            <h3>Email Us</h3>
+            <p><a href="mailto:hassa9kashmal@gmail.com">shopper@gmail.com</a></p>
+        </div>
+
+        <!-- Phone Card -->
+        <div class="card">
+            <h3>Call Us</h3>
+            <p>0689118095</p>
+            <!-- <p>0749391961</p> -->
+        </div>
+
+        <!-- Social Media Card -->
+        <div class="card">
+            <h3>Follow Us</h3>
+            <p>Stay connected and follow us on our social media channels for updates and promotions!</p>
+            <a href="https://www.instagram.com/buymefashion" target="_blank">Instagram</a> |
+            <a href="https://www.facebook.com/buymefashion" target="_blank">Facebook</a> |
+            <a href="https://www.twitter.com/buymefashion" target="_blank">Twitter</a>
+        </div>
+    </div>
+
+    <!-- Get in Touch Section with Form -->
+    <div class="get-in-touch">
+        <h2>Get in Touch</h2>
+        <p>We would love to hear from you. Please fill out the form below, and we will get back to you as soon as possible.</p>
+        <!-- Your Contact Form Section -->
+<form class="contact-form" action="/submit_form" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+    <button type="submit">Send Message</button>
+</form>
+
+<!-- Include the JavaScript at the end of the body -->
+<script>
+// (Paste the JavaScript code here)
+</script>
+
+    </div>
+
+    <!-- Google Map Section -->
+    <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112271.20488855481!2d39.113470501458224!3d-6.7070539193445375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x185c4b969861b719%3A0xf28b2e8c0b83e7f2!2sCollege%20of%20Business%20Education!5e1!3m2!1sen!2stz!4v1736090386083!5m2!1sen!2stz" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        
+    </div>
+
+     <!-- here is a footer section -->
+     <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+              <div class="logo">
+                <a href="home.html"><img src="images/logo/logo.png" alt="Shopper"></a>
+              </div>
+                <p>Your one-stop shop for the latest in fashion. Quality, style, and affordability at your fingertips.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="product.html">Product</a></li>
+                    <li><a href="arrival.html">New Arrivals</a></li>
+                    <li><a href="cart.html">Carts</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="contact.html"></a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Our Policy</h3>
+                <ul>
+                  <li><a href="privacy.html">Privacy Policy</a></li>
+                  <li><a href="term.html">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+              <h3>Contact Us</h3>
+              <ul>
+                  <li><i class="fas fa-phone-alt"></i> 0689118095</li>
+                  <li><i class="fas fa-envelope"></i> info@Shopper.com</li>
+                  <li><i class="fas fa-map-marker-alt"></i> Posta, Dar es Salaam, Tanzania</li>
+              </ul>
+          </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <!-- Social Media Links -->
+                  <a href="https://www.facebook.com/share/YiW1mhjWb84LWc1d/?mibextid=qi2Omg" class="social-icon" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://x.com/hassankashmal?t=QzDECh-Hv1emIwT8iEyvBQ&s=01" class="social-icon" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com/hassanayn_kashmal?igsh=bDJ0emc1bXB2MmU0" class="social-icon" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.youtube.com/channel/shopper" class="social-icon" target="_blank">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                </div>
+            </div>
+
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Shopper. All rights reserved. Developed By Kashmal</p>
+        </div>
+    </footer>
+
+</body>
+</html>

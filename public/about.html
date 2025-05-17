@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>About Us</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Smooth Scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Body */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('images/clothes/Man/18.jpg') no-repeat center center/cover;
+            height: 500px;
+            padding: 80px 20px;
+            text-align: center;
+            color: white;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            animation: fadeInUp 2s ease-in-out;
+        }
+
+        /* About Us Section */
+        .about-us {
+            background-color: #f9f9f9;
+            padding: 80px 20px;
+        }
+
+        .about-us .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .about-us h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .about-us p {
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.8;
+            max-width: 900px;
+            margin: 20px auto;
+        }
+
+        .about-us ul {
+            list-style: none;
+            max-width: 800px;
+            margin: 40px auto;
+        }
+
+        .about-us ul li {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        /* Gallery Section */
+        .gallery {
+            background: url('images/clothes/Man/1.jpg') no-repeat center center/cover;
+            padding: 100px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .gallery .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+        }
+
+        .gallery p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Why Choose Us Section */
+        .choose-us {
+            background-color: #ffe4b5;
+            padding: 80px 20px;
+        }
+
+        .choose-us .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .choose-us h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .choose-us ul {
+            list-style: none;
+            max-width: 800px;
+            margin: 40px auto;
+        }
+
+        .choose-us ul li {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Hover Effects on Links */
+        .about-us a {
+            color: #ff9800;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .about-us a:hover {
+            color: #ff5722;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .about-us h2 {
+                font-size: 2rem;
+            }
+
+            .about-us p {
+                font-size: 1rem;
+            }
+
+            .about-us ul li {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+<header>
+    <div class="logo">
+      <a href="home.html"><img src="images/logo/logo.png" alt="Buy Me Fashion"></a>
+    </div>
+  
+    <nav class="navbar">
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="men.html">Men</a></li>
+        <li><a href="women.html">Women</a></li>
+        <li><a href="accessories.html">Accessories</a></li>
+        <li><a href="product.html">Sale</a></li>
+        <li><a href="arrival.html">New Arrivals</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+    </nav>
+    
+    <div class="search-cart">
+      <input type="text" id="search-input" placeholder="Search products..." oninput="searchProducts()">
+      <div class="cart">
+        <a href="cart.html" style="text-decoration: none;">
+          <img src="images/logo/d-4.png" alt="Cart">
+        </a>
+        <span class="cart-count">3</span>
+      </div>
+    </div>
+  </header>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Welcome to Shopper</h1>
+        <p>Your ultimate online destination for stylish, trendy, and affordable fashion.</p>
+    </div>
+
+    <!-- About Us Section -->
+    <div class="about-us">
+        <div class="container">
+            <h2>Our Story</h2>
+            <p>Born from a love of fashion and a mission to make it accessible to all, Buy Me Fashion was created with one simple idea in mind: to bring high-quality, on-trend pieces to fashion lovers everywhere. From casual looks to stunning statement pieces, we provide clothing that fits your style and budget.</p>
+
+            <h2>Our Mission</h2>
+            <p>At Shopper, our mission is to empower you through fashion. We want everyone to have access to chic, stylish, and affordable fashion. Whether you're looking for everyday wear or something for a special event, we've got you covered with clothing that's both trendy and timeless.</p>
+
+            <h2>What We Offer</h2>
+            <ul>
+                <li><strong>Trendy Clothing:</strong> Dresses, tops, jeans, skirts, outerwear, and more.</li>
+                <li><strong>Chic Accessories:</strong> Bags, jewelry, scarves, and hats to elevate any look.</li>
+                <li><strong>Footwear:</strong> A wide variety of shoes for every occasion.</li>
+                <li><strong>Size Inclusivity:</strong> Fashion for every body type, from petite to plus-size.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Gallery Section -->
+    <div class="gallery">
+        <div class="container">
+            <h2>Explore Our Gallery</h2>
+            <p>Discover the latest collections and explore how our fashion pieces can transform your wardrobe.</p>
+        </div>
+    </div>
+
+    <!-- Why Choose Us Section -->
+    <div class="choose-us">
+        <div class="container">
+            <h2>Why Choose Us?</h2>
+            <ul>
+                <li><strong>Affordable Fashion:</strong> Stay stylish without breaking the bank.</li>
+                <li><strong>Quality You Can Trust:</strong> Carefully curated collections from reputable brands.</li>
+                <li><strong>Fast & Free Shipping:</strong> Enjoy quick delivery with free shipping on qualifying orders.</li>
+                <li><strong>Customer-Centered Service:</strong> Our friendly support team is here to help you every step of the way.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+              <div class="logo">
+                <a href="home.html"><img src="images/logo/logo.png" alt="Shopper"></a>
+              </div>
+                <p>Your one-stop shop for the latest in fashion. Quality, style, and affordability at your fingertips.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="product.html">Product</a></li>
+                    <li><a href="arrival.html">New Arrivals</a></li>
+                    <li><a href="cart.html">Carts</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Our Policy</h3>
+                <ul>
+                  <li><a href="privacy.html">Privacy Policy</a></li>
+                  <li><a href="term.html">Terms & Conditions</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+              <h3>Contact Us</h3>
+              <ul>
+                  <li><i class="fas fa-phone-alt"></i> 0689118095</li>
+                  <li><i class="fas fa-envelope"></i> info@Shopper.com</li>
+                  <li><i class="fas fa-map-marker-alt"></i> Posta, Dar es Salaam, Tanzania</li>
+              </ul>
+          </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Shopper. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

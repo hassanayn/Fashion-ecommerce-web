@@ -1,0 +1,290 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopper.com</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- <script src="https://kit.fontawesome.com/a076d05399.js"></script> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<script src="search.js"></script>
+  <script src="carausel.js"></script>
+</head>
+<body>
+
+  <!-- <h1 style="text-align: center;">Developed By Kashmal</h1> -->
+
+  <!-- Header Section -->
+<header>
+  <div class="logo">
+    <a href="home.html"><img src="images/logo/logo.png" alt="Shopper"></a>
+  </div>
+  
+ 
+
+  <nav class="navbar">
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="men.html">Men</a></li>
+      <li><a href="women.html">Women</a></li>
+      <li><a href="accessories.html">Accessories</a></li>
+      <li><a href="product.html">Sale</a></li>
+      <li><a href="arrival.html">New Arrivals</a></li>
+      <li><a href="login.html">Login</a></li>
+    </ul>
+  </nav>
+  
+  <div class="search-cart">
+    <input type="text" id="search-input" placeholder="Search products..." oninput="searchProducts()">
+    <div class="cart">
+      <a href="cart.html" style="text-decoration: none;">
+        <img src="images\logo\d-4.png" alt="Cart">
+      </a>
+      <span class="cart-count">3</span>
+    </div>
+  </div>
+</header>
+
+
+  
+<!-- Carousel Section -->
+<section class="carousel">
+    <div class="carousel-container">
+      <!-- Carousel Images -->
+      <div class="carousel-slide">
+        <div class="carousel-item">
+          <img src="images\carousel-1\banner-bg.png" alt="Fashion Sale">
+          <div class="carousel-caption">
+            <h2>Winter Fashion Sale</h2>
+            <p>Up to 50% off on selected items!</p>
+            <a href="product.html" style="text-decoration: none;">
+
+              <button class="shop-now">Shop Now</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="images\carousel-1\banner-img.png" alt="Fashion Sale">
+          <div class="carousel-caption">
+            <h2>Winter Fashion Sale</h2>
+            <p>Up to 50% off on selected items!</p>
+            <a href="product.html" style="text-decoration: none;">
+
+              <button class="shop-now"><a href="product.html">Shop Now</a></button>
+            </a>
+          </div>
+        </div>
+        
+        <div class="carousel-item">
+            <img src="images\carousel-1\banner-b1g.jpg" alt="Fashion Sale">
+            <div class="carousel-caption">
+              <h2>Winter Fashion Sale</h2>
+              <p>Up to 50% off on selected items!</p>
+              <a href="product.html" style="text-decoration: none;">
+
+                <button class="shop-now">Shop Now</button>
+              </a>
+            </div>
+          </div>
+          
+        <div class="carousel-item">
+          <img src="images\carousel-1\carousel1.png" alt="New Arrivals">
+          <div class="carousel-caption">
+            <h2>New Arrivals</h2>
+            <p>Check out our latest collection.</p>
+            <a href="product.html" style="text-decoration: none;">
+
+              <button class="shop-now">Shop Now</button>
+            </a>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="images\carousel-1\carousel3.png" alt="Special Offers">
+          <div class="carousel-caption">
+            <h2>Exclusive Offers</h2>
+            <p>Limited-time deals on popular styles.</p>
+            <a href="product.html" style="text-decoration: none;">
+
+              <button class="shop-now">Shop Now</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="carousel-slide">
+            <div class="carousel-item">
+              <img src="images\carousel-1\carousel-2.jpg" alt="Fashion Sale">
+              <div class="carousel-caption">
+                <h2>Winter Fashion Sale</h2>
+                <p>Up to 50% off on selected items!</p>
+                <a href="product.html" style="text-decoration: none;">
+
+                  <button class="shop-now">Shop Now</button>
+                </a>
+              </div>
+            </div>
+      </div>
+      <!-- Carousel Controls -->
+      <button class="carousel-prev" onclick="moveSlide(-1)">&#10094;</button>
+      <button class="carousel-next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+  </section>
+  
+
+  
+
+  <!-- Featured Categories Section -->
+  <section class="categories">
+    <h2>Shop by Category</h2>
+    <a href="men.html" style="text-decoration: none;">
+    <div class="category-cards">
+      <div class="category-card">
+        <img src="images/category/team-member-02.jpg" alt="Men's Fashion">
+        <h3>Men's Fashion</h3>
+      </div></a>
+
+      <a href="women.html" style="text-decoration: none;">
+      <div class="category-card">
+        <img src="images/category/team-member-01.jpg" alt="Women's Fashion">
+        <h3>Women's Fashion</h3>
+      </div></a>
+
+    <a href="product.html" style="text-decoration: none;">
+      <div class="category-card">
+        <img src="images/category/explore-image-01.jpg" alt="Accessories">
+        <h3>Accessories</h3>
+      </div></a>
+    </div>
+  </section>
+
+  <!-- Best-Selling Products Section -->
+  <section class="best-selling">
+    <h2>Best Selling Products</h2>
+    <div class="products">
+      <div class="product-card">
+        <img src="images\clothes\women\3.jpg" alt="Product 1">
+        <p>Manga</p>
+        <p class="price">$7.99</p>
+      </div>
+      <div class="product-card">
+        <img src="images\clothes\accessories\shoes/35.jpg" alt="Product 2">
+        <p>Crazy jin</p>
+        <p class="price">$20.99</p>
+      </div>
+      <div class="product-card">
+        <img src="images\clothes\accessories\shoes/6.jpg" alt="Product 3">
+        <p>Jordan 4</p>
+        <p class="price">$40.99</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Promotions Section -->
+  <section class="promotions">
+    <div class="promotion-banner">
+      <h2>Winter Sale</h2>
+      <p>Up to 70% off on all winter clothing.</p>
+      <button class="shop-now">Shop Sale</button>
+    </div>
+  </section>
+
+  <!-- Customer Testimonials Section -->
+  <section class="testimonials">
+    <h2>What Our Customers Are Saying</h2>
+    <div class="testimonial-cards">
+      <div class="testimonial-card">
+        <p>"I love the quality of the clothes! Fast shipping too."</p>
+        <p>- Hassan D.</p>
+      </div>
+      <div class="testimonial-card">
+        <p>"Best online shopping experience ever. Highly recommend!"</p>
+        <p>- Ester.</p>
+      </div>
+    </div>
+  </section>
+
+
+
+      <!-- Payment Methods Section -->
+      <div class="payment-methods">
+        <h2>We Accept Payments From</h2>
+        <p>Choose your preferred payment method from the following options.</p>
+        
+        <!-- Payment Method Icons -->
+        <div class="payment-icons">
+            <img src="images\payment\visa.png" alt="Visa">
+            <img src="images\payment\mc.png" alt="MasterCard">
+            <img src="images\payment\paypal.jpg" alt="PayPal">
+            <img src="images\payment\pp.png" alt="Apple Pay">
+            <img src="images\payment\maestro.png" alt="Google Pay">
+            <img src="images\payment\maestro.png" alt="American Express">
+        </div>
+    </div>
+
+ <!-- here is a footer section -->
+    <footer class="footer">
+      <div class="footer-container">
+          <div class="footer-section">
+            <div class="logo">
+              <a href="home.html"><img src="images/logo/logo.png" alt="Shopper"></a>
+            </div>
+              <p>Your one-stop shop for the latest in fashion. Quality, style, and affordability at your fingertips.</p>
+          </div>
+          <div class="footer-section">
+              <h3>Quick Links</h3>
+              <ul>
+                  <li><a href="home.html">Home</a></li>
+                  <li><a href="product.html">Product</a></li>
+                  <!-- <li><a href="arrival.html">New Arrivals</a></li> -->
+                  <li><a href="cart.html">Carts</a></li>
+                  <li><a href="login.html">Login</a></li>
+                  <li><a href="about.html">About Us</a></li>
+                  <li><a href="contact.html">Contact Us</a></li>
+                  <li><a href="contact.html"></a></li>
+              </ul>
+          </div>
+          
+          <div class="footer-section">
+              <h3>Our Policy</h3>
+              <ul>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="term.html">Terms & Conditions</a></li>
+              </ul>
+          </div>
+          <div class="footer-section">
+            <h3>Contact Us</h3>
+            <ul>
+                <li><i class="fas fa-phone-alt"></i> 0689118095</li>
+                <li><i class="fas fa-envelope"></i> info@Shopper.com</li>
+                <li><i class="fas fa-map-marker-alt"></i> Posta, Dar es Salaam, Tanzania</li>
+            </ul>
+            <div class="footer-section">
+              <h3>Follow Us</h3>
+              <div class="social-icons">
+                    <!-- Social Media Links -->
+                  <a href="https://www.facebook.com/share/YiW1mhjWb84LWc1d/?mibextid=qi2Omg" class="social-icon" target="_blank">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://x.com/hassankashmal?t=QzDECh-Hv1emIwT8iEyvBQ&s=01" class="social-icon" target="_blank">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com/hassanayn_kashmal?igsh=bDJ0emc1bXB2MmU0" class="social-icon" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.youtube.com/channel/shopper" class="social-icon" target="_blank">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                </div>
+          </div>
+          
+          
+      <div class="footer-bottom">
+          <p>&copy; 2025 Shopper. All rights reserved.Developed by Kashmal</p>
+      </div>
+  </footer>
+
+  
+
+</body>
+</html>

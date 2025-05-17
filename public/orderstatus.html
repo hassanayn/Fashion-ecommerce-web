@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Status</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        h2 {
+            text-align: center;
+            margin-top: 30px;
+            color: #333;
+        }
+
+        .status-container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .status-details {
+            margin-top: 20px;
+        }
+
+        .status-details p {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h2>Order Status</h2>
+    <div class="status-container">
+        <div class="status-details">
+            <p>Order ID: <span id="order-id"></span></p>
+            <p>Status: <span id="order-status"></span></p>
+            <p>Tracking Number: <span id="tracking-number"></span></p>
+        </div>
+    </div>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const orderId = urlParams.get('orderId');
+
+        fetch(`http://localhost:3000/order-status/${orderId}`)
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("order-id").textContent = orderId;
+                document.getElementById("order-status").textContent = data[0].status;
+                document.getElementById("tracking-number").textContent = data[0].tracking_number || "Not Available";
+            });
+    });
+    </script>
+</body>
+</html>
